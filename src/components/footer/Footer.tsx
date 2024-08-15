@@ -42,7 +42,7 @@ const Footer = () => {
           <div className='flex gap-4 justify-center sm:justify-start'>
             <Link href='https://www.linkedin.com/company/generational-stewards-for-antimicrobials-gsa/'><i className='bi bi-linkedin'></i></Link>
             <Link href='https://twitter.com/Preservefutures'><i className='bi bi-twitter'></i></Link>
-            <Link href='https://www.facebook.com/profile.php?id=1000093674206378&mibextid=LQQJ4d'><i className='bi bi-facebook'></i></Link>
+            <Link href='https://www.facebook.com/profile.php?id=100093674206378'><i className='bi bi-facebook'></i></Link>
           </div>
         </div>
 
