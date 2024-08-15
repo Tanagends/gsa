@@ -109,7 +109,7 @@ const Members = {
             id:'munyaradzitagara',
             name:'Munyaradzi',
             surname:'Tagara',
-            title:'Member',
+            title:'Clubs Coordinator',
             imageExtention:'jpg',
             socials:{
                 twitter:'https://x.com/innocent_2802?t=emNu7Nnik2OWIZnrcYB9lg&s=09',
@@ -140,7 +140,7 @@ const Members = {
             id:'paradzainjazi',
             name:'Paradzai',
             surname:'Njazi',
-            title:'Member',
+            title:'Research Officer',
             imageExtention:'jpg',
             socials:{
                 twitter:'https://x.com/innocent_2802?t=emNu7Nnik2OWIZnrcYB9lg&s=09',
