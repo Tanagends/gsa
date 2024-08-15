@@ -3,7 +3,7 @@ const Members = {
             id:'ngonimuzondo',
             name:'Ngoni',
             surname:'Muzondo',
-            title:'Chairperson and Head of Programs',
+            title:'Head of Programs',
             imageExtention:'jpg',
             socials:{
                 twitter:'https://x.com/PowerMaster_tm',
@@ -39,7 +39,7 @@ const Members = {
             id:'munyaradzichisora',
             name:'Munyaradzi',
             surname:'Chisora',
-            title:'Co-founder/ Events Planning Officer',
+            title:'Events Planning Officer',
             imageExtention:'JPG',
             socials:{
                 twitter:null,
@@ -282,11 +282,11 @@ const Members = {
                 title:'Monitoring and Evaluation officer',
                 imageExtention:'jpg',
                 socials:{
-                    twitter:null,
-                    email:null,
+                    twitter:"https://x.com/TapiwaShaw42039?t=uNWzireznWu6uHNFTAWZ3w&s=09",
+                    email:"shawntapiwachikuku@gmail.com",
                     phone:'+263785811965',
-                    linkedin:null,
-                    facebook:null,
+                    linkedin:"https://www.linkedin.com/in/shawn-tapiwa-chikuku-a0ab58210?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                    facebook:"https://www.facebook.com/shawntapiwa.chikuku",
                     instagram:null,
                 },
                 bio:[
