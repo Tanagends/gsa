@@ -277,7 +277,7 @@ const Members = {
             },
             shawnchikuku: {
                 id:'shawnchikuku',
-                name:'Shawn',
+                name:'Shawn Tapiwa',
                 surname:'Chikuku',
                 title:'Monitoring and Evaluation officer',
                 imageExtention:'jpg',
