@@ -7,12 +7,25 @@ import Image from 'next/image';
 import { createClient } from '@/prismicio';
 import * as prismic from '@prismicio/client';
 
-const metadata = {
-   title: 'Team Member | GSA Team',
-   description: `A member at Generational Stewards for Antimicrobials (GSA). Read their bio and articles.`,
-   keywords: ["GSA Member", "GSA team", "antimicrobial resistance experts"],
-   author: `Generational Stewards for Antimicrobials (GSA)`,
+  export const metadata = {
+    title: 'Generational Stewards for Antimicrobials | Team Member',
+    description: `A member at Generational Stewards for Antimicrobials (GSA). Read their bio and articles.`,
+    keywords: [
+      "AMR articles",
+      "antimicrobial resistance insights",
+      "team articles",
+      "AMR education",
+      "global health articles",
+      "non-profit Zimbabwe",
+      "AMR innovation",
+      "Generational Stewards for Antimicrobials team members",
+      "public health education",
+      "health teams",
+      "antimicrobial stewardship team",
+      "team contributions",
+  ],
 };
+
 
 async function page({params}) {
 

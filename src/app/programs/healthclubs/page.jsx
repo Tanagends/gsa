@@ -2,8 +2,13 @@ import Link from "next/link"
 import LinksToSocials from "../linksToSocials"
 
 export const metadata = {
-    title:'Programs'
-}
+  title: 'Generational Stewards for Antimicrobials | Program 3',
+  description: "Learn about Generational Stewards for Antimicrobials (GSA) programs and initiatives aimed at addressing antimicrobial resistance.",
+  keywords: ["GSA programs", "antimicrobial resistance initiatives", "health advocacy programs", "stewardship initiatives"],
+  url: "https://www.gsaglobal.co.zw/programs/healthclubs",  // Replace with actual URL
+  canonical: "https://www.gsaglobal.co.zw/programs/healthclubs",  // Replace with actual URL
+};
+
 const Programs = () => {
   return (
     <>

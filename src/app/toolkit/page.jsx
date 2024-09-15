@@ -3,13 +3,26 @@ import { PrismicNextLink } from '@prismicio/next';
 import * as prismic from '@prismicio/client';
 
 export const metadata = {
-  title: "GSA Toolkit: Resources to Combat Antimicrobial Resistance",
+  title: 'Generational Stewards for Antimicrobials | AMR Educational Toolkit',
   description: "Download expert-authored PDFs and resources from Generational Stewards for Antimicrobials (GSA) to help address antimicrobial resistance.",
-  url: "/toolkit",
-  image: "/assets/images/gsa-toolkit.jpg",
-  keywords: ["GSA toolkit", "antimicrobial resistance resources", "AMR PDFs", "health advocacy tools", "stewardship guides"],
-  author: "Generational Stewards for Antimicrobials (GSA)"
-}
+  keywords: [
+    "AMR toolkit",
+    "antimicrobial resistance resources",
+    "AMR education materials",
+    "PDF resources",
+    "teaching AMR",
+    "AMR advocacy tools",
+    "non-profit Zimbabwe",
+    "global health education",
+    "antimicrobial stewardship",
+    "Generational Stewards for Antimicrobials toolkit",
+    "AMR training resources",
+    "AMR teaching materials",
+  ],
+  url: "https://www.gsaglobal.co.zw/toolkit",  // Replace with actual URL
+  canonical: "https://www.gsaglobal.co.zw/toolkit",  // Replace with actual URL
+};
+
 
 async function Toolkit() {
   const client = createClient();

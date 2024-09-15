@@ -1,12 +1,30 @@
 import Members from "./[member]/Members"
 import MemberCard from '@/app/ourteam/MemberCard'
 
-const metadata = {
+const metaata = {
   title: "Meet the GSA Team: Dedicated to Combating Antimicrobial Resistance",
-  description: "Get to know the passionate team behind Generational Stewards for Antimicrobials (GSA). Learn about our members' expertise and commitment to addressing antimicrobial resistance.",
   keywords: ["GSA team", "antimicrobial resistance experts", "health advocacy team", "stewardship leaders"],
   author: "Generational Stewards for Antimicrobials (GSA)"
 }
+export const metadata = {
+  title: 'Generational Stewards for Antimicrobials | Meet the GSA Team',
+  description: "Get to know the passionate team behind Generational Stewards for Antimicrobials (GSA). Learn about our members' expertise and commitment to addressing antimicrobial resistance.",
+  keywords: [
+    "AMR articles",
+    "antimicrobial resistance insights",
+    "team articles",
+    "AMR education",
+    "Generational Stewards for Antimicrobials team",
+    "Generational Stewards for Antimicrobials members",
+    "team contributions",
+    "GSA team",
+    "antimicrobial resistance experts",
+    "health advocacy team",
+    "stewardship leaders"
+  ],
+  url: "https://www.gsaglobal.co.zw/ourteam",  // Replace with actual URL
+  canonical: "https://www.gsaglobal.co.zw/ourteam",  // Replace with actual URL
+};
 
 const page = () => {
   let keys = []

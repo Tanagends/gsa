@@ -1,12 +1,27 @@
 import Post from '@/components/latestPosts/Post';
 import { createClient } from '@/prismicio';
 
-const metadata = {
-  title: "GSA News: Latest Updates on Antimicrobial Resistance",
-  description: "Stay informed about the latest news, updates, and breakthroughs on antimicrobial resistance from Generational Stewards for Antimicrobials (GSA). Read our news articles and press releases.",
-  keywords: ["antimicrobial resistance news", "GSA updates", "AMR breakthroughs", "health advocacy news", "stewardship news"],
-  author: "Generational Stewards for Antimicrobials (GSA)"
-}
+export const metadata = {
+	title: 'Generational Stewards for Antimicrobials | Latest News on Antimicrobial Resistance',
+	description: "Stay informed about the latest news, updates, and breakthroughs on antimicrobial resistance from Generational Stewards for Antimicrobials (GSA). Read our news articles and press releases.",
+	keywords: [
+	  "AMR articles",
+	  "antimicrobial resistance insights",
+	  "AMR education",
+	  "global health news",
+	  "non-profit Zimbabwe",
+	  "AMR innovation",
+	  "Generational Stewards for Antimicrobials news",
+	  "public health news",
+	  "health advocacy",
+	  "antimicrobial stewardship writings",
+	  "GSA updates",
+	  "health advocacy news",
+	  "stewardship news"
+	],
+	url: "https://www.gsaglobal.co.zw/media/news",  // Replace with actual URL
+	canonical: "https://www.gsaglobal.co.zw/media/news",  // Replace with actual URL
+  };
 
 export default async function LatestPosts () {
   const client = createClient();
