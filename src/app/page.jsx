@@ -232,7 +232,7 @@ export default async function Home() {
         <LandingGallery />
       </section>
       {/* latest posts */}
-      <LatestPosts />
+{/*       <LatestPosts /> */}
       <HomePageAnime />
     </main>
   );
