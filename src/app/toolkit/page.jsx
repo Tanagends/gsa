@@ -33,9 +33,9 @@ async function Toolkit() {
   <p className='p-2 text-sm font-light sm:text-center sm:text-lg'>
   This toolkit is designed for educators and professionals committed to advancing knowledge on antimicrobials. It offers comprehensive resources in the form of downloadable PDF files, enabling you to effectively share and utilize the materials as needed.
 </p>
-    <section className="bg-white flex flex-col items-center sm:flex-row flex-wrap sm:justify-center sm:items-start gap-2 py-2">
+    <section className="bg-white flex flex-wrap justify-center gap-2 py-2">
       {toolkits.map((el, index) => (
-        <article key={index} className="w-[320px] border-2 border-main-500 rounded-md p-2 flex-shrink-0 group slide-in-top">
+        <article key={index} className="w-[320px] border-2 border-main-500 rounded-md p-2 flex-shrink-0 group slide-in-top mx-auto sm:mx-0">
 			<div className='flex gap-2'>
           	<h1 className="text-2xl font-bold">{el.data.title}</h1>
 			<span className='text-red-600 text-xl block'><i className="bi bi-file-earmark-pdf"></i></span>
