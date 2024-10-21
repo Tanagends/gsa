@@ -39,7 +39,7 @@ async function page({params}) {
       ],
     });
     const articles = article.results;
-    revaidateTag("prismic");
+    revalidateTag("prismic");
     return (
           <div className="bg-white min-h-screen">
             <section className="flex flex-col items-center gap-2 p-4 md:flex-row md:justify-center">
