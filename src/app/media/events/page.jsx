@@ -1,5 +1,6 @@
 import Post from '@/components/latestPosts/Post';
 import { createClient } from '@/prismicio';
+import { revalidateTag } from "next/cache";
 
 export const metadata = {
 	title: 'Generational Stewards for Antimicrobials | Event Highlights and Outcomes',
@@ -24,6 +25,7 @@ export const metadata = {
 export default async function LatestPosts () {
   const client = createClient();
   const events = await client.getAllByTag('events');
+  revalidateTag("prismicTag");
   return ( 
 	   <section>
 	<h1 className="text-4xl font-bold my-4 text-center text-main-400 w-full flex-shrink-0">Events</h1>

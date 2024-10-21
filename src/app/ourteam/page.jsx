@@ -1,5 +1,6 @@
 import Members from "./[member]/Members"
 import MemberCard from '@/app/ourteam/MemberCard'
+import { revalidateTag } from "next/cache"
 
 const metaata = {
   title: "Meet the GSA Team: Dedicated to Combating Antimicrobial Resistance",
@@ -31,6 +32,7 @@ const page = () => {
   for(let key in Members){
     keys.push(key)
   }
+  revalidateTag("prismic");
   return (
     <section className="flex flex-col justify-center items-center gap-2 p-2 sm:flex-row flex-wrap sm:items-start md:h-screen">
             <h1 className="font-bold text-main-500 text-2xl sm:text-3xl text-center w-full m-4">Our Team</h1>

@@ -2,6 +2,7 @@
 import { createClient } from '@/prismicio';
 import Link from 'next/link';
 import Gallery from './Gallery';
+import { revalidateTag } from "next/cache";
 
 export const metadata = {
   title: 'Generational Stewards for Antimicrobials | Media and Activity Gallery',
@@ -27,6 +28,7 @@ export const metadata = {
 async function Media () {
 	const client = createClient();
 	const images = await client.getAllByType('image_gallery');
+	revalidateTag("prismic");
 return (
   <>
   	<h1 className="text-4xl font-bold my-4 text-center text-main-400 w-full flex-shrink-0">Media</h1>
