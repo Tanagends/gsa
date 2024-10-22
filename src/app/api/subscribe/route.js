@@ -6,6 +6,8 @@ export async function POST(req, res) {
   if (!email || !name) {
     console.error('Email or Name missing');
     return new Response(JSON.stringify({ error: 'Email and Name are required' }), { status: 400 });
+  }else{
+    console.log({email:email, name:name})
   }
 
   const API_KEY = process.env.NEXT_PUBLIC_MAILCHIMP_API_KEY;
