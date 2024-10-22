@@ -27,7 +27,7 @@ export const metadata = {
 export default async function LatestPosts () {
   const client = createClient();
   const news = await client.getAllByTag('news');
-  revalidate("prismic");
+  revalidateTag("prismic");
   return ( 
 	   <section>
 	<h1 className="text-4xl font-bold my-4 text-center text-main-400 w-full flex-shrink-0">News</h1>
