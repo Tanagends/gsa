@@ -7,7 +7,7 @@ import Contact from '@/components/Contact';
 import LandingGallery from '@/components/LandingGallery';
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { revalidateTag } from "next/cache":
+import { revalidateTag } from "next/cache";
 
 export const metadata = {
   title: 'Generational Stewards for Antimicrobials | Empowering Future Generations to Combat AMR',
