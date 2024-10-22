@@ -37,7 +37,7 @@ export default function ContactPage() {
         setContactStatus('Failed to send message.');
       }
     } catch (error) {
-        setContactStatus('Failed to send message.');
+        setContactStatus('cannot reach api.');
     }
   }
 
