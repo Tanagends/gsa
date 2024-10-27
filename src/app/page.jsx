@@ -120,6 +120,27 @@ const contactDetails = [
   }
 ]
 
+
+export const metadata = {
+  title: 'Generational Stewards for Antimicrobials',
+  description: 'Empowering the next generation to combat antimicrobial resistance (AMR) through education, innovation, and advocacy. Learn about our mission, vision, and programs fostering responsible antimicrobial use and global health solutions.',
+  keywords: 'antimicrobial resistance, AMR, global health, education, innovation, advocacy, responsible use',
+  author: 'Generational Stewards for Antimicrobials',
+  descriptionLong: 'Join our mission to empower the next generation to combat antimicrobial resistance through education, innovation, and advocacy. Learn about our programs, events, and resources fostering responsible antimicrobial use and global health solutions.',
+  image: 'link-to-your-website-image',
+  url: 'https://www.gsaglobal.org.zw',
+  socialMedia: {
+    twitter: 'https://twitter.com/Preservefutures',
+    facebook: 'https://www.facebook.com/profile.php?id=100093674206378&mibextid=LQQJ4d',
+    linkedin: 'https://www.linkedin.com/company/generational-stewards-for-antimicrobials-gsa/',
+  },
+  contact: {
+    email: 'gsateamglobal@gmail.com',
+    phone: '+263772916923',
+    address: 'GSA Headquarters, Harare, Zimbabwe',
+  },
+  copyright: '2024 Generational Stewards for Antimicrobials. All rights reserved.',
+}
 export default async function Home() {
   revalidateTag("prismic");
   return (
