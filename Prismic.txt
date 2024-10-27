@@ -1,0 +1,47 @@
+User Manual for uploading content to the GSA website using Prismic:
+
+General guidelines:
+
+- Make sure to fill all the fields required so that it will appear correctly on the website.
+- Make sure to fill the correct information on each field.
+
+
+Specific Guidelines:
+
+1) Articles
+
+- Each article must be given a tag from the following three options - articles, events, and news - accordingly.
+NB: An article may have two or all three tags, and it will appear in all those sections on the website.
+
+*** Making your story in the story field, with the help of a forward slash, / ***
+
+- When writing each article, on the story field, use a forward slash, /, to select if you want a heading, ie h1 to h6. h1 is the biggest heading whilst h6 is the smallest, and can provide a way to put subheadings, and their subheadings, which will appear in relatively decreasing sizes.
+
+- p will allow writing a paragraph
+- embed requires you to upload a valid link of a video, and the video will appear in the article. The link could be a youtube video link.
+- bulleted and numbered lists, allows you to list items on the website and they will appear as a list respectively. Press enter twice to exit the list mode. This allows you to use slash again for your next section in the article.
+- image allows you to put an image that will appear in your story
+- code should never be used
+*** NB - The your story will appear in the exact order you write it in this story field.
+
+- AUTHORS NAME: it should be exactly as it is on the website - Title capitalised, meaning Firstname Middlename1 Middlename2 Surname, with spaces in between, starting each in capitals. If unsure, visit the Our Team page and copy the fullname exactly.
+
+This ensures your articles will also appear in your bio section under my posts.
+
+2) Toolkit
+
+- Upload the document under the field, PDF link
+- Fill all the sections except the tag, which is not important
+
+3) Image Gallery
+- Upload the image
+- It is recommended to write the 'alt text field' with a short description for the image as it helps search engines rank your content high on the internet in the relevant searches.
+- The tag field is not important.
+
+
+When creating any of the three content types, log in to prismic, and click on create new page or create new document and fill all the fields following the rules outlined above.
+
+Happy Content Management !!!
+
+
+By PixelCrafte, www.pixelcrafte.co.zw

@@ -104,7 +104,7 @@ export const metadata = {
   author: 'Generational Stewards for Antimicrobials',
   descriptionLong: 'Join our mission to empower the next generation to combat antimicrobial resistance through education, innovation, and advocacy. Learn about our programs, events, and resources fostering responsible antimicrobial use and global health solutions.',
   image: 'link-to-your-website-image',
-  url: 'pending',
+  url: 'https://www.gsaglobal.org.zw',
   socialMedia: {
     twitter: 'https://twitter.com/Preservefutures',
     facebook: 'https://www.facebook.com/profile.php?id=100093674206378&mibextid=LQQJ4d',
