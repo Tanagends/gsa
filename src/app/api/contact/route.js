@@ -1,8 +1,14 @@
 import nodemailer from 'nodemailer';
+import { NextResponse } from 'next/server';
 
 export async function POST(req) {
   const { name, email, message } = await req.json();
-
+  if(!name || !email || !message){
+    return NextResponse({message:'Something is missing'}, {status: 400})
+  }else{
+    console.log({name:name, email:email, message:message   
+    })
+  }
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {

@@ -1,14 +1,29 @@
 //import Gallery from "./Gallery";
 import { createClient } from '@/prismicio';
 import Link from 'next/link';
-import { PrismicNextImage } from '@prismicio/next';
 import Gallery from './Gallery';
 import { revalidateTag } from "next/cache";
 
 export const metadata = {
-  title:'GSA in Action: Photos, Stories, and Updates',
-  description: 'Explore the visual story of Generational Stewards for Antimicrobials (GSA) - browse photos from our campaigns, meetings, and events, and discover more through our articles, upcoming events, and newsletters.'
-}
+  title: 'Generational Stewards for Antimicrobials | Media and Activity Gallery',
+  keywords: [
+    "antimicrobial resistance",
+    "AMR advocacy",
+    "global health activities",
+    "media gallery",
+    "non-profit Zimbabwe",
+    "AMR education",
+    "health initiatives Zimbabwe",
+    "Generational Stewards for Antimicrobials media",
+    "community outreach",
+    "health innovation",
+    "Zimbabwe health programs",
+    "AMR awareness events",
+  ],
+  url: "https://www.gsaglobal.co.zw/media",  // Replace with actual URL
+  canonical: "https://www.gsaglobal.co.zw/media",  // Replace with actual URL
+};
+
 
 async function Media () {
 	const client = createClient();

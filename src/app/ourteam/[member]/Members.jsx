@@ -3,7 +3,7 @@ const Members = {
             id:'ngonimuzondo',
             name:'Ngoni',
             surname:'Muzondo',
-            title:'Chairperson and Head of Programs',
+            title:'Head of Programs',
             imageExtention:'jpg',
             socials:{
                 twitter:'https://x.com/PowerMaster_tm',
@@ -39,7 +39,7 @@ const Members = {
             id:'munyaradzichisora',
             name:'Munyaradzi',
             surname:'Chisora',
-            title:'Co-founder/ Events Planning Officer',
+            title:'Events Planning Officer',
             imageExtention:'JPG',
             socials:{
                 twitter:null,
@@ -102,14 +102,16 @@ const Members = {
                 instagram:null,
             },
             bio: [
-                'I\'m a young Pharmacist who is passionate about AMR Stewardship'
+                'Tafadzwa Chirisa is a dedicated and passionate young Pharmacist with 1 year of experience in community pharmacy. Driven by a desire to make a meaningful impact in the health sector, she is a passionate advocate for patient safety and public health. Tafadzwa is committed to fostering a culture of antimicrobial stewardship and driving measurable improvements in facility antimicrobial use and patient outcomes. She is proud to be part of the team working to ensure the responsible and sustainable use of essential medical resources.',
+                'As a natural leader, Tafadzwa has honed her skills through various roles, including: President of ENACTUS at Harare Institute of Technology, where she leveraged entrepreneurial action to drive progress; Vice President of the Zimbabwe Pharmaceutical Students Association for 2 years, demonstrating her ability to lead and collaborate; Treasurer of GSA, where she currently oversees financial management and reporting, ensuring seamless financial operations and compliance with regulations',
+                'With a strong passion for leadership, community service, and AMR Stewardship, Tafadzwa is poised to make a lasting impact in the healthcare industry'
             ]
         },
         munyaradzitagara:{
             id:'munyaradzitagara',
             name:'Munyaradzi',
             surname:'Tagara',
-            title:'Member',
+            title:'Clubs Coordinator',
             imageExtention:'jpg',
             socials:{
                 twitter:'https://x.com/innocent_2802?t=emNu7Nnik2OWIZnrcYB9lg&s=09',
@@ -140,7 +142,7 @@ const Members = {
             id:'paradzainjazi',
             name:'Paradzai',
             surname:'Njazi',
-            title:'Member',
+            title:'Research Officer',
             imageExtention:'jpg',
             socials:{
                 twitter:'https://x.com/innocent_2802?t=emNu7Nnik2OWIZnrcYB9lg&s=09',
@@ -282,11 +284,11 @@ const Members = {
                 title:'Monitoring and Evaluation officer',
                 imageExtention:'jpg',
                 socials:{
-                    twitter:null,
-                    email:null,
+                    twitter:"https://x.com/TapiwaShaw42039?t=uNWzireznWu6uHNFTAWZ3w&s=09",
+                    email:"shawntapiwachikuku@gmail.com",
                     phone:'+263785811965',
-                    linkedin:null,
-                    facebook:null,
+                    linkedin:"https://www.linkedin.com/in/shawn-tapiwa-chikuku-a0ab58210?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+                    facebook:"https://www.facebook.com/shawntapiwa.chikuku",
                     instagram:null,
                 },
                 bio:[

@@ -2,17 +2,32 @@ import Post from '@/components/latestPosts/Post';
 import { createClient } from '@/prismicio';
 import { revalidateTag } from "next/cache";
 
-const metadata = {
-  title: "GSA News: Latest Updates on Antimicrobial Resistance",
-  description: "Stay informed about the latest news, updates, and breakthroughs on antimicrobial resistance from Generational Stewards for Antimicrobials (GSA). Read our news articles and press releases.",
-  keywords: ["antimicrobial resistance news", "GSA updates", "AMR breakthroughs", "health advocacy news", "stewardship news"],
-  author: "Generational Stewards for Antimicrobials (GSA)"
-}
+export const metadata = {
+	title: 'Generational Stewards for Antimicrobials | Latest News on Antimicrobial Resistance',
+	description: "Stay informed about the latest news, updates, and breakthroughs on antimicrobial resistance from Generational Stewards for Antimicrobials (GSA). Read our news articles and press releases.",
+	keywords: [
+	  "AMR articles",
+	  "antimicrobial resistance insights",
+	  "AMR education",
+	  "global health news",
+	  "non-profit Zimbabwe",
+	  "AMR innovation",
+	  "Generational Stewards for Antimicrobials news",
+	  "public health news",
+	  "health advocacy",
+	  "antimicrobial stewardship writings",
+	  "GSA updates",
+	  "health advocacy news",
+	  "stewardship news"
+	],
+	url: "https://www.gsaglobal.co.zw/media/news",  // Replace with actual URL
+	canonical: "https://www.gsaglobal.co.zw/media/news",  // Replace with actual URL
+  };
 
 export default async function LatestPosts () {
   const client = createClient();
   const news = await client.getAllByTag('news');
-  revalidate("prismic");
+  revalidateTag("prismic");
   return ( 
 	   <section>
 	<h1 className="text-4xl font-bold my-4 text-center text-main-400 w-full flex-shrink-0">News</h1>

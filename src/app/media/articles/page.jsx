@@ -2,13 +2,26 @@ import Post from '@/components/latestPosts/Post';
 import { createClient } from '@/prismicio';
 import { revalidateTag } from "next/cache";
 
-const metadata = {
-  title: "GSA Articles: Insights on Antimicrobial Resistance",
-  description: "Stay informed about antimicrobial resistance with articles from Generational Stewards for Antimicrobials (GSA). Read expert insights, news, and stories on our mission to combat AMR.",
-  keywords: ["antimicrobial resistance", "GSA articles", "AMR insights", "health advocacy", "stewardship"],
-  author: "Generational Stewards for Antimicrobials (GSA)"
-}
-
+export const metadata = {
+	title: 'Generational Stewards for Antimicrobials | Articles and Insights by Team Members',
+	keywords: [
+	  "AMR articles",
+	  "antimicrobial resistance insights",
+	  "team articles",
+	  "AMR education",
+	  "global health articles",
+	  "non-profit Zimbabwe",
+	  "AMR innovation",
+	  "Generational Stewards for Antimicrobials articles",
+	  "public health education",
+	  "health advocacy",
+	  "antimicrobial stewardship writings",
+	  "team contributions",
+	],
+	url: "https://www.gsaglobal.co.zw/media/articles",  // Replace with actual URL
+	canonical: "https://www.gsaglobal.co.zw/media/articles",  // Replace with actual URL
+  };
+  
 export default async function LatestPosts () {
   const client = createClient();
   const articles_arr = await client.getAllByTag('articles');

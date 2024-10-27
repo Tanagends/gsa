@@ -4,13 +4,26 @@ import * as prismic from '@prismicio/client';
 import { revalidateTag } from "next/cache";
 
 export const metadata = {
-  title: "GSA Toolkit: Resources to Combat Antimicrobial Resistance",
+  title: 'Generational Stewards for Antimicrobials | AMR Educational Toolkit',
   description: "Download expert-authored PDFs and resources from Generational Stewards for Antimicrobials (GSA) to help address antimicrobial resistance.",
-  url: "/toolkit",
-  image: "/assets/images/gsa-toolkit.jpg",
-  keywords: ["GSA toolkit", "antimicrobial resistance resources", "AMR PDFs", "health advocacy tools", "stewardship guides"],
-  author: "Generational Stewards for Antimicrobials (GSA)"
-}
+  keywords: [
+    "AMR toolkit",
+    "antimicrobial resistance resources",
+    "AMR education materials",
+    "PDF resources",
+    "teaching AMR",
+    "AMR advocacy tools",
+    "non-profit Zimbabwe",
+    "global health education",
+    "antimicrobial stewardship",
+    "Generational Stewards for Antimicrobials toolkit",
+    "AMR training resources",
+    "AMR teaching materials",
+  ],
+  url: "https://www.gsaglobal.co.zw/toolkit",  // Replace with actual URL
+  canonical: "https://www.gsaglobal.co.zw/toolkit",  // Replace with actual URL
+};
+
 
 async function Toolkit() {
   const client = createClient();
@@ -22,9 +35,9 @@ async function Toolkit() {
   <p className='p-2 text-sm font-light sm:text-center sm:text-lg'>
   This toolkit is designed for educators and professionals committed to advancing knowledge on antimicrobials. It offers comprehensive resources in the form of downloadable PDF files, enabling you to effectively share and utilize the materials as needed.
 </p>
-    <section className="bg-white flex flex-col items-center sm:flex-row flex-wrap sm:justify-center sm:items-start gap-2 py-2">
+    <section className="bg-white flex flex-wrap justify-center gap-2 py-2">
       {toolkits.map((el, index) => (
-        <article key={index} className="w-[320px] border-2 border-main-500 rounded-md p-2 flex-shrink-0 group slide-in-top">
+        <article key={index} className="w-[320px] border-2 border-main-500 rounded-md p-2 flex-shrink-0 group slide-in-top mx-auto sm:mx-0">
 			<div className='flex gap-2'>
           	<h1 className="text-2xl font-bold">{el.data.title}</h1>
 			<span className='text-red-600 text-xl block'><i className="bi bi-file-earmark-pdf"></i></span>
