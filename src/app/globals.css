@@ -355,7 +355,7 @@
     }
     
     img {
-        @apply block w-full max-w-[100%] sm:max-w-[80%] md:max-w-[60%] lg:max-w-[50%] mx-auto h-auto;
+        @apply block w-full max-w-[100%] sm:max-w-[80%] md:max-w-[60%] lg:max-w-[40%] mx-auto h-auto rounded-md;
     }
     
     ul {
@@ -367,7 +367,7 @@
     }
     
     iframe {
-        @apply w-full aspect-video max-w-[100%] p-2;
+        @apply w-[380px] h-[270px] rounded-lg shadow-lg mx-auto;
     }
 }
 

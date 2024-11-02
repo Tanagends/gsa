@@ -6,31 +6,8 @@ import LatestPosts from '@/components/latestPosts/LatestPosts';
 import Contact from '@/components/Contact';
 import LandingGallery from '@/components/LandingGallery';
 import dynamic from "next/dynamic";
-import Image from "next/image";
 import { revalidateTag } from "next/cache";
 import Values from '@/components/Values'
-
-export const metadata = {
-  title: 'Generational Stewards for Antimicrobials | Empowering Future Generations to Combat AMR',
-  keywords: [
-    "antimicrobial resistance",
-    "AMR",
-    "global health",
-    "non-profit Zimbabwe",
-    "responsible antimicrobial use",
-    "antibiotic stewardship",
-    "health advocacy",
-    "education on AMR",
-    "AMR innovation",
-    "Zimbabwe health programs",
-    "Generational Stewards for Antimicrobials",
-    "AMR solutions",
-    "public health Zimbabwe",
-  ],
-  url: "https://www.gsaglobal.co.zw/",  // Replace with actual URL
-  canonical: "https://www.gsaglobal.co.zw/",  // Replace with actual URL
-};
-
 
 const HomePageAnime = dynamic(() => import('./HomePageAnime'), { ssr: false });
 const partners = [
