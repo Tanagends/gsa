@@ -41,10 +41,10 @@ const Post = ({image, title, content, author, date, link, type}) => {
   	      datetime={
             prismic
             .asDate(date)
-            .toISOString()
+            ?.toISOString()
           }
 	      >
-  	     {prismic.asDate(date).toLocaleString()}
+  	     {prismic.asDate(date)?.toLocaleString()}
 	      </time>
       </div>
     </div>
