@@ -159,74 +159,35 @@ const Programs = () => {
 
   return (
     <>
-      {/* Spacer for navbar */}
-      <div className="h-20"></div>
-
-      {/* Programs Header with Enhanced Navigation */}
-      <div className="bg-gradient-to-b from-main-50 to-white pt-10 pb-6">
-        <h1 className="text-5xl md:text-6xl font-black text-center mb-10">
-          <span className="bg-gradient-to-r from-main-400 via-main-600 to-main-800 bg-clip-text text-transparent">
-            Our Programs
-          </span>
-        </h1>
-        
-        {/* Enhanced Program Navigation */}
-        <section className="flex justify-center px-4">
-          <div className="flex flex-wrap gap-3 p-3 bg-gradient-to-r from-gray-100 to-gray-50 rounded-2xl shadow-lg">
+      {/* Navigation Pills */}
+      <section className="sticky top-0 z-40 bg-gradient-to-b from-white via-white to-transparent pt-4 pb-6">
+        <div className="flex justify-center gap-2">
+          {[
+            { href: '/programs', num: '1', label: 'Overview' },
+            { href: '/programs/healthclubs', num: '2', label: 'Health Clubs' },
+            { href: '/programs/twarawe', num: '3', label: 'TWARAWE', active: true },
+            { href: '/programs/eyitfaar', num: '4', label: 'EYITFAAR' }
+          ].map((item, index) => (
             <Link 
-              href='/programs'
-              className="group relative flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-gray-200 to-gray-300 
-                       text-gray-700 font-bold rounded-xl hover:from-main-100 hover:to-main-200 hover:text-main-700
-                       transition-all duration-300 transform hover:scale-105 hover:shadow-md"
+              key={index}
+              href={item.href}
+              className={`group relative px-6 py-3 rounded-full font-bold transition-all duration-300 transform hover:scale-105
+                ${item.active 
+                  ? 'bg-gradient-to-r from-main-500 to-main-700 text-white shadow-xl shadow-main-500/30' 
+                  : 'bg-gradient-to-r from-gray-100 to-gray-200 text-gray-600 hover:from-main-100 hover:to-main-200 hover:text-main-700'
+                }`}
             >
-              <span className="flex items-center justify-center w-7 h-7 bg-white rounded-full text-sm font-black 
-                           group-hover:bg-main-500 group-hover:text-white transition-all duration-300">
-                1
+              <span className="flex items-center gap-2">
+                <span className={`text-sm ${item.active ? 'text-[#FFCC00]' : 'text-main-400'}`}>{item.num}</span>
+                <span className="hidden sm:inline">{item.label}</span>
               </span>
-              <span className="hidden sm:inline">Overview</span>
+              {item.active && (
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-main-500 to-main-700 animate-pulse opacity-20"></div>
+              )}
             </Link>
-            
-            <Link 
-              href='/programs/healthclubs'
-              className="group relative flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-gray-200 to-gray-300 
-                       text-gray-700 font-bold rounded-xl hover:from-main-100 hover:to-main-200 hover:text-main-700
-                       transition-all duration-300 transform hover:scale-105 hover:shadow-md"
-            >
-              <span className="flex items-center justify-center w-7 h-7 bg-white rounded-full text-sm font-black 
-                           group-hover:bg-main-500 group-hover:text-white transition-all duration-300">
-                2
-              </span>
-              <span className="hidden sm:inline">Health Clubs</span>
-            </Link>
-            
-            <Link 
-              href='/programs/twarawe'
-              className="group relative flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-main-500 to-main-700 
-                       text-white font-bold rounded-xl shadow-xl shadow-main-500/30
-                       transition-all duration-300 transform hover:scale-105"
-            >
-              <span className="flex items-center justify-center w-7 h-7 bg-[#FFCC00] text-main-900 rounded-full text-sm font-black animate-pulse">
-                3
-              </span>
-              <span className="hidden sm:inline">TWARAWE</span>
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-main-500 to-main-700 opacity-20 animate-pulse"></div>
-            </Link>
-            
-            <Link 
-              href='/programs/eyitfaar'
-              className="group relative flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-gray-200 to-gray-300 
-                       text-gray-700 font-bold rounded-xl hover:from-main-100 hover:to-main-200 hover:text-main-700
-                       transition-all duration-300 transform hover:scale-105 hover:shadow-md"
-            >
-              <span className="flex items-center justify-center w-7 h-7 bg-white rounded-full text-sm font-black 
-                           group-hover:bg-main-500 group-hover:text-white transition-all duration-300">
-                4
-              </span>
-              <span className="hidden sm:inline">EYITFAAR</span>
-            </Link>
-          </div>
-        </section>
-      </div>
+          ))}
+        </div>
+      </section>
 
       {/* Hero Section */}
       <section ref={heroRef} className="relative py-20 px-4 overflow-hidden">
@@ -244,7 +205,7 @@ const Programs = () => {
             <span className="text-sm font-bold text-[#FFCC00]">World AMR Awareness Week</span>
           </div>
           
-          <h2 className="text-4xl md:text-6xl font-black mb-6">
+          <h1 className="text-4xl md:text-6xl font-black mb-6">
             <span className="bg-gradient-to-r from-white to-main-200 bg-clip-text text-transparent">
               The World Antimicrobial Resistance
             </span>
@@ -252,7 +213,7 @@ const Programs = () => {
             <span className="bg-gradient-to-r from-[#FFCC00] via-yellow-400 to-[#FFCC00] bg-clip-text text-transparent">
               Awareness Week Engagement
             </span>
-          </h2>
+          </h1>
           
           <p className="text-xl text-gray-200 max-w-3xl mx-auto mb-8">
             Leading Youth Engagement in Zimbabwe's fight against AMR through innovative campaigns, 
@@ -290,9 +251,9 @@ const Programs = () => {
           
           {/* Introduction */}
           <div className="mb-16 text-center">
-            <h3 className="text-3xl md:text-4xl font-bold text-main-800 mb-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-main-800 mb-6">
               Mobilizing Youth for Global Health
-            </h3>
+            </h2>
             <p className="text-lg text-gray-600 max-w-4xl mx-auto leading-relaxed">
               The Generational Stewards for Antimicrobials (GSA) has taken a leading role in coordinating 
               youth engagement during World Antimicrobial Resistance Awareness Week (WAAW) in Zimbabwe, 

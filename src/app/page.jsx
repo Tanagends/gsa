@@ -7,63 +7,12 @@ import Contact from '@/components/Contact';
 import LandingGallery from '@/components/LandingGallery';
 import dynamic from "next/dynamic";
 import { revalidateTag } from "next/cache";
-import Values from '@/components/Values'
+import Values from '@/components/Values';
+import { createClient } from '@/prismicio';
+import CTA from '@/components/CTA';
 
 const HomePageAnime = dynamic(() => import('./HomePageAnime'), { ssr: false });
-const partners = [
-  {
-    name:"Zimbabwe Youth Council",
-    icon:'linkedin',
-    link:"https://www.linkedin.com/company/zim-youth-council/",
-    image:'zyc.jpg'
-  },
-  {
-    name:"African Youth Antimicrobial Resistance Alliance Taskforce",
-    icon:'linkedin',
-    link:"https://www.linkedin.com/company/ayara-tf/",
-    image:'ayr.jpg'
-  },
-  {
-    name:"Stop superbugs Network",
-    icon:'twitter-x',
-    link:"https://x.com/theurgentneed?s=11",
-    image:'stop.jpg'
-  },
-  {
-    name:'ReAct Africa',
-    icon:'box-arrow-up-right',
-    link:'https://www.reactgroup.org/about-us/a-global-network/react-africa/',
-    image:'react.png'
-  }
-]
 
-//
-const WhoWeAre = {
-  id:'who-we-are',
-  title:'Who Are We',
-  about:"We are dedicated to fostering innovation and advocacy in our health and awareness campaigns, specifically focusing on Antimicrobial Resistance (AMR). Our primary goal is to promote and empower stewardship among primary and secondary school students. By raising awareness and providing education, we aim to instil a sense of responsibility and understanding of AMR in the younger generation. We are inculcating a culture of social responsibility among young people to mitigate the threat of the spread of antimicrobial resistance in African communities using a One Health Approach. We are a catalyst organization and we achieve this by empowering young people, especially tertiary level students, and recent graduates by designing relevant programs that can trigger their interests and equip them with appropriate skills that mould them to be the next change-makers, opinion leaders, and hopefully pursue a career in the AMR sector. This is achieved through regular training and mentorship programs."
-}
-const mission = {
-  id:'mission',
-  title:'Our Mission',
-  about:"We are committed to empowering the next generation as champions and advocates for responsible antimicrobial use. Our mission is to cultivate a community of student leaders dedicated to combating antimicrobial resistance (AMR) through research, innovation, and social responsibility. We provide a dynamic platform for learning and action through engaging educational programs, the creation of collaborative AMR clubs, and mentorship opportunities designed to nurture student ideas. By connecting these future leaders with relevant stakeholders, we aim to facilitate impactful collaborations and pave the way for student-led solutions to flourish and create lasting change in the fight against AMR."
-}
-const vision = {
-  id:'vision',
-  title:'Our Vision',
-  about:"Our vision is to empower and educate young people to understand and tackle antimicrobial resistance (AMR) by fostering innovative solutions. We aim to engage and equip the next generation to actively contribute to global efforts in addressing this critical health threat."
-}
-
-const values = [
-  "Dedication",
-  "Empathy",
-  "Industriousness",
-  "Teamwork",
-  "Grassroot engagement",
-  "Empowerment",
-  ]
-
-//
 const contactDetails = [
   {
     name:'linkedIn',
@@ -97,11 +46,25 @@ const contactDetails = [
   }
 ]
 
-
 export const metadata = {
   title: 'Generational Stewards for Antimicrobials',
   description: 'Empowering the next generation to combat antimicrobial resistance (AMR) through education, innovation, and advocacy. Learn about our mission, vision, and programs fostering responsible antimicrobial use and global health solutions.',
-  keywords: 'antimicrobial resistance, AMR, global health, education, innovation, advocacy, responsible use',
+ keywords: [
+    "antimicrobial resistance",
+    "AMR",
+    "global health",
+    "non-profit Zimbabwe",
+    "responsible antimicrobial use",
+    "antibiotic stewardship",
+    "health advocacy",
+    "education on AMR",
+    "AMR innovation",
+    "Zimbabwe health programs",
+    "Generational Stewards for Antimicrobials",
+    "AMR solutions",
+    "public health Zimbabwe",
+  ],
+
   author: 'Generational Stewards for Antimicrobials',
   descriptionLong: 'Join our mission to empower the next generation to combat antimicrobial resistance through education, innovation, and advocacy. Learn about our programs, events, and resources fostering responsible antimicrobial use and global health solutions.',
   image: 'link-to-your-website-image',
@@ -116,10 +79,21 @@ export const metadata = {
     phone: '+263772916923',
     address: 'GSA Headquarters, Harare, Zimbabwe',
   },
-  copyright: '2024 Generational Stewards for Antimicrobials. All rights reserved.',
+  copyright: '2025 Generational Stewards for Antimicrobials. All rights reserved.',
 }
 export default async function Home() {
   revalidateTag("prismic");
+  const client = createClient();
+  const articles_arr = await client.getAllByType("article", {
+    limit: 5,
+    orderings: [
+      {
+        field: 'my.article.publishing_time',
+        direction: 'desc',
+      },
+    ],
+  });
+
   return (
     <main className="overflow-x-hidden">
       {/* animation to allow page loading */}
@@ -157,42 +131,12 @@ export default async function Home() {
         </p>
       </section>
 
-      {/* About Section */}
-      <section className="flex flex-col flex-wrap justify-center items-center p-2 pt-8 gap-10 sm:gap-5">
-        <About key={"about-1"} {...WhoWeAre} />
-        <About key={"about-2"} {...mission} />
-        <About key={"about-3"} {...vision} />
-      </section>
-
-      {/* values */}
+      <About />
+            {/* values */}
       <Values />
-      {/* <section className="values p-2 py-4 my-4 bg-white text-black flex flex-col md:flex-row md:items-center md:justify-around">
-      <article className="flex justify-center items-center w-[320px] flex-grow-0 flex-shrink-0 h-[250px] md:w-2/3 md:h-full md:order-2 overflow-hidden slide-in-top mx-auto md:mx-0">
-        <Image
-          src="/assets/images/bg-1.jpeg"
-          width={700}
-          height={600}
-          className="block rounded-md object-cover max-w-full max-h-full hover:scale-110 transition-transform ease-linear duration-200"
-          alt="gsa members gathered at harare institute of technology (HIT)"
-        />
-      </article>
-        <article className="">
-          <h1 className="slide-in-top text-2xl font-bold my-5 md:text-4xl">Our Core Values</h1>
-          <ul className=" flex flex-col gap-3 justify-center items-center">
-            {values.map((item, index) => <li key={'value-'+index} className="border-2 slide-in-left border-main-400 p-2 rounded-xl w-[200px] flex flex-row md:text-lg md:w-[260px] md:py-4"><span className="block bi bi-capsule w-fit flex-grow-0 text-main-400"></span><span className="block font-semibold text-center flex-grow">{item}</span></li>)}
-          </ul>
-        </article>
-      </section> */}
-
-      {/* partners */}
-      <section className="partners" id="partners">
-        <h1 className="section-heading slide-in-top">Our Partners</h1>
-        <div className="partners-container flex flex-col sm:flex-row flex-wrap gap-2 justify-center">
-            {partners.map((item, index) => <Partner key={'partner-'+index} {...item}/>)}
-        </div>
-      </section>
-
-      {/* join us and contact-us*/}
+      <Partner />
+            
+      {/* join us and contact-us
       <section className="my-4 contacts-section text-white p-2 space-y-3 responsive-text">
         <article className="contact-us bg-main-300 bg-opacity-15 backdrop-blur-md p-2 rounded-lg sm:w-2/3 mx-auto shadow-md shadow-black">
           <h1 className="bg-transparent text-center text-main2 font-bold text-xl">Connect With Us</h1>
@@ -223,18 +167,14 @@ export default async function Home() {
             <Link href="mailto:Info@gsa.co.zw" className="btn-main">Donate</Link>
           </p>
         </article>
-      </section>
+      </section>*/}
 
-      {/* gallery */}
-      <h1 className="section-heading slide-in-top">Check out our gallery</h1>
-      <section className="gallery-slide bg-main-500 overflow-hidden">
-        <article className="p-2 gallery-btn">
-          <Link href='/media' className="btn-main ml-6 md:text-3xl">Gallery<span className="bi-camera pl-2 text-white"></span></Link>
-        </article>
-        <LandingGallery />
-      </section>
+      {/* gallery */} 
+           
+      <LandingGallery />
       {/* latest posts */}
-      <LatestPosts />
+      <LatestPosts articles_arr={ articles_arr } />
+      <CTA />
       <HomePageAnime />
     </main>
   );
