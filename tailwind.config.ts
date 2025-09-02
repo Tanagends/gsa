@@ -12,6 +12,18 @@ const config: Config = {
         'xs':'400px',
         'fold':'360px'
       },
+      clipPath: {
+        hexagon: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)',
+      },
+      keyframes: {
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-10px)' },
+        },
+      },
+      animation: {
+        float: 'float 6s ease-in-out infinite',
+      },
       colors:{
         main: {
           100: "#13d4f7",
@@ -29,6 +41,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-clip-path'),],
 };
 export default config;
