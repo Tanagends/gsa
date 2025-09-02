@@ -5,17 +5,19 @@ import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { 
-  HiDocumentText, HiUser,
-  HiSparkles, HiBookOpen, HiPencilSquare
+  HiNewspaper, HiBell, HiClock,
+  HiSparkles, HiMegaphone, HiArrowTrendingUp,
+  HiGlobeAlt, HiBolt
 } from 'react-icons/hi2';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function ArticlesPageClient({ articles }) {
+export default function NewsPageClient({ news }) {
   const heroRef = useRef(null);
-  const articlesRef = useRef([]);
-  const [filter, setFilter] = useState('all');
-  const [visibleArticles, setVisibleArticles] = useState(6);
+  const newsRef = useRef([]);
+  const tickerRef = useRef(null);
+  const [filter, setFilter] = useState('latest');
+  const [visibleNews, setVisibleNews] = useState(6);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -25,9 +27,9 @@ export default function ArticlesPageClient({ articles }) {
         { opacity: 1, y: 0, duration: 1, ease: "power3.out" }
       );
 
-      // Articles stagger animation
-      if (articlesRef.current.length > 0) {
-        gsap.fromTo(articlesRef.current,
+      // News cards stagger animation
+      if (newsRef.current.length > 0) {
+        gsap.fromTo(newsRef.current,
           { 
             opacity: 0, 
             y: 50,
@@ -41,7 +43,7 @@ export default function ArticlesPageClient({ articles }) {
             stagger: 0.1,
             ease: "power3.out",
             scrollTrigger: {
-              trigger: articlesRef.current[0],
+              trigger: newsRef.current[0],
               start: "top 80%",
               once: true
             }
@@ -58,16 +60,38 @@ export default function ArticlesPageClient({ articles }) {
         ease: "power1.inOut",
         stagger: 0.5
       });
+
+      // News ticker animation
+      if (tickerRef.current) {
+        gsap.to(tickerRef.current, {
+          x: "-100%",
+          duration: 30,
+          repeat: -1,
+          ease: "none"
+        });
+      }
+
+      // Pulse animation for live indicator
+      gsap.to('.pulse-live', {
+        scale: 1.2,
+        opacity: 0,
+        duration: 1.5,
+        repeat: -1,
+        ease: "power2.out"
+      });
     });
 
     return () => ctx.revert();
-  }, [articles]);
+  }, [news]);
 
-  const categories = ['all', 'research', 'education', 'policy', 'community'];
+  const filters = ['latest', 'breaking', 'research', 'policy', 'global'];
 
   const loadMore = () => {
-    setVisibleArticles(prev => prev + 6);
+    setVisibleNews(prev => prev + 6);
   };
+
+  // Get latest 3 news for ticker
+  const tickerNews = news.slice(0, 3);
 
   return (
     <>
@@ -84,31 +108,59 @@ export default function ArticlesPageClient({ articles }) {
         <div className="float-element absolute bottom-20 left-20 w-40 h-40 bg-main-400/10 rounded-full blur-3xl"></div>
 
         {/* Decorative icons */}
-        <HiBookOpen className="absolute top-10 left-10 text-6xl text-white/5 rotate-12" />
-        <HiPencilSquare className="absolute bottom-10 right-10 text-6xl text-[#FFCC00]/5 -rotate-12" />
+        <HiNewspaper className="absolute top-10 left-10 text-6xl text-white/5 rotate-12" />
+        <HiMegaphone className="absolute bottom-10 right-10 text-6xl text-[#FFCC00]/5 -rotate-12" />
 
         <div className="relative max-w-6xl mx-auto text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#FFCC00]/20 rounded-full mb-6 backdrop-blur-sm">
-            <HiDocumentText className="text-[#FFCC00]" />
-            <span className="text-sm font-bold text-[#FFCC00]">Insights &amp; Research</span>
+          {/* Live Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/20 rounded-full mb-6 backdrop-blur-sm">
+            <div className="relative">
+              <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+              <div className="pulse-live absolute inset-0 w-3 h-3 bg-red-500 rounded-full"></div>
+            </div>
+            <span className="text-sm font-bold text-red-400">LATEST UPDATES</span>
           </div>
           
           <h1 className="text-5xl md:text-7xl font-black mb-6">
             <span className="bg-gradient-to-r from-white via-main-200 to-white bg-clip-text text-transparent">
-              Articles &amp;
+              Breaking
             </span>
             <br />
             <span className="bg-gradient-to-r from-[#FFCC00] via-yellow-400 to-[#FFCC00] bg-clip-text text-transparent">
-              Insights
+              News
             </span>
           </h1>
           
           <p className="text-xl text-gray-200 max-w-3xl mx-auto">
-            Expert perspectives and thought leadership from our team on antimicrobial resistance, 
-            public health, and innovative solutions for a healthier future
+            Stay informed with the latest developments, breakthroughs, and updates in the fight against 
+            antimicrobial resistance from around the globe
           </p>
         </div>
       </section>
+
+      {/* News Ticker */}
+      {tickerNews.length > 0 && (
+        <section className="bg-gradient-to-r from-[#FFCC00] to-yellow-500 py-3 overflow-hidden">
+          <div className="flex items-center">
+            <div className="flex-shrink-0 px-4 bg-main-900 text-white py-2 rounded-r-full mr-4 z-10 shadow-lg">
+              <span className="font-bold flex items-center gap-2">
+                <HiBolt className="text-[#FFCC00]" />
+                TRENDING
+              </span>
+            </div>
+            <div className="flex animate-scroll" ref={tickerRef}>
+              {[...tickerNews, ...tickerNews].map((item, index) => (
+                <div key={index} className="flex items-center mx-8 whitespace-nowrap">
+                  <span className="text-main-900 font-semibold">
+                    {item.data.title}
+                  </span>
+                  <span className="mx-4 text-main-700">•</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Media Type Navigation */}
       <section className="py-6 bg-gradient-to-b from-white to-gray-50">
@@ -136,23 +188,23 @@ export default function ArticlesPageClient({ articles }) {
             
             <Link 
               href="/media/articles"
-              className="group relative flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-main-500 to-main-700 
-                       text-white font-bold rounded-xl shadow-xl shadow-main-500/30
-                       transition-all duration-300 transform hover:scale-105"
-            >
-              <span className="text-xl">📝</span>
-              <span>Articles</span>
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-main-500 to-main-700 opacity-20 animate-pulse"></div>
-            </Link>
-            
-            <Link 
-              href="/media/news"
               className="group relative flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-gray-200 to-gray-300 
                        text-gray-700 font-bold rounded-xl hover:from-main-100 hover:to-main-200 hover:text-main-700
                        transition-all duration-300 transform hover:scale-105 hover:shadow-md"
             >
+              <span className="text-xl">📝</span>
+              <span>Articles</span>
+            </Link>
+            
+            <Link 
+              href="/media/news"
+              className="group relative flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-main-500 to-main-700 
+                       text-white font-bold rounded-xl shadow-xl shadow-main-500/30
+                       transition-all duration-300 transform hover:scale-105"
+            >
               <span className="text-xl">📰</span>
               <span>News</span>
+              <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-main-500 to-main-700 opacity-20 animate-pulse"></div>
             </Link>
           </div>
         </div>
@@ -163,10 +215,10 @@ export default function ArticlesPageClient({ articles }) {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
-              { icon: HiDocumentText, value: articles.length, label: "Articles Published" },
-              { icon: HiUser, value: "15+", label: "Contributing Authors" },
-              { icon: HiBookOpen, value: "50K+", label: "Readers Reached" },
-              { icon: HiSparkles, value: "100%", label: "Original Content" }
+              { icon: HiNewspaper, value: news.length, label: "News Stories" },
+              { icon: HiGlobeAlt, value: "20+", label: "Countries Covered" },
+              { icon: HiArrowTrendingUp, value: "100K+", label: "Readers Monthly" },
+              { icon: HiBell, value: "24/7", label: "News Updates" }
             ].map((stat, index) => (
               <div key={index} className="text-center group hover:transform hover:-translate-y-2 transition-all duration-300">
                 <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-main-100 to-main-200 
@@ -185,50 +237,59 @@ export default function ArticlesPageClient({ articles }) {
       <section className="py-8 px-4 bg-gradient-to-b from-gray-50 to-white">
         <div className="max-w-6xl mx-auto">
           <div className="flex flex-wrap justify-center gap-3 mb-12">
-            {categories.map((category) => (
+            {filters.map((filterType) => (
               <button
-                key={category}
-                onClick={() => setFilter(category)}
+                key={filterType}
+                onClick={() => setFilter(filterType)}
                 className={`px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105
-                  ${filter === category 
+                  ${filter === filterType 
                     ? 'bg-gradient-to-r from-main-500 to-main-700 text-white shadow-lg' 
                     : 'bg-white text-gray-700 hover:bg-main-100 hover:text-main-700 shadow-md'
                   }`}
               >
-                {category.charAt(0).toUpperCase() + category.slice(1)}
+                {filterType.charAt(0).toUpperCase() + filterType.slice(1)}
               </button>
             ))}
           </div>
 
-          {/* Articles Grid */}
+          {/* News Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {articles.slice(0, visibleArticles).map((article, index) => (
+            {news.slice(0, visibleNews).map((item, index) => (
               <div
-                key={`article-${index}`}
-                ref={el => articlesRef.current[index] = el}
+                key={`news-${index}`}
+                ref={el => newsRef.current[index] = el}
                 className="relative group transform hover:-translate-y-2 transition-all duration-300"
               >
-                {/* Category Badge - positioned absolutely over the Post component 
-                <div className="absolute top-4 left-4 z-10 bg-[#FFCC00] text-main-900 px-3 py-1 
-                              rounded-full text-xs font-bold shadow-lg">
-                  {article.data.category || 'Research'}
-                </div>*/}
+                {/* Breaking Badge for first 3 items */}
+                {index < 3 && (
+                  <div className="absolute top-4 left-4 z-10 bg-red-500 text-white px-3 py-1 
+                                rounded-full text-xs font-bold shadow-lg animate-pulse">
+                    BREAKING
+                  </div>
+                )}
                 
-                {/* Post Component - already a complete card */}
+                {/* Time Badge */}
+                <div className="absolute top-4 right-4 z-10 bg-main-900/80 text-white px-3 py-1 
+                              rounded-full text-xs font-bold backdrop-blur-sm flex items-center gap-1">
+                  <HiClock className="text-[#FFCC00]" />
+                  {new Date(item.data.publishing_time).toLocaleDateString()}
+                </div>
+                
+                {/* Post Component */}
                 <Post
-                  image={article.data.story_image}
-                  title={article.data.title}
-                  content={article.data.story}
-                  author={article.data.author}
-                  date={article.data.publishing_time}
-                  link={article.url}
+                  image={item.data.story_image}
+                  title={item.data.title}
+                  content={item.data.story}
+                  author={item.data.author}
+                  date={item.data.publishing_time}
+                  link={item.url}
                 />
               </div>
             ))}
           </div>
 
-          {/* Load More Button
-          {visibleArticles < articles.length && (
+          {/* Load More Button */}
+          {visibleNews < news.length && (
             <div className="text-center mt-12">
               <button 
                 onClick={loadMore}
@@ -237,7 +298,7 @@ export default function ArticlesPageClient({ articles }) {
                          rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 
                          transition-all duration-300"
               >
-                <span>Load More Articles</span>
+                <span>Load More News</span>
                 <svg className="w-5 h-5 group-hover:translate-y-1 transition-transform" 
                      fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
@@ -245,38 +306,32 @@ export default function ArticlesPageClient({ articles }) {
                 </svg>
               </button>
             </div>
-          )*/}
+          )}
         </div>
       </section>
 
-      {/* Newsletter CTA */}
+      {/* Subscribe Alert Section */}
       <section className="py-16 px-4 bg-gradient-to-br from-main-900 via-main-800 to-main-900">
         <div className="max-w-4xl mx-auto text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#FFCC00]/20 rounded-full mb-6">
-            <HiSparkles className="text-[#FFCC00]" />
-            <span className="text-sm font-bold text-[#FFCC00]">Stay Informed</span>
+            <HiBell className="text-[#FFCC00] animate-pulse" />
+            <span className="text-sm font-bold text-[#FFCC00]">News Alerts</span>
           </div>
           
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Never Miss an Article
+            Never Miss Breaking News
           </h2>
           <p className="text-gray-200 mb-8">
-            Subscribe to get the latest insights and research delivered to your inbox
+            Get instant notifications when we publish important AMR news and updates
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
-            <input 
-              type="email" 
-              placeholder="Enter your email"
-              className="flex-1 px-6 py-3 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 
-                       text-white placeholder-gray-400 focus:outline-none focus:border-[#FFCC00] transition-colors"
-            />
-            <button className="px-8 py-3 bg-gradient-to-r from-[#FFCC00] to-yellow-500 hover:from-yellow-500 
-                             hover:to-[#FFCC00] text-main-900 font-bold rounded-full transition-all duration-300 
-                             transform hover:scale-105 shadow-xl">
-              Subscribe
-            </button>
-          </div>
+          <button className="group inline-flex items-center gap-3 bg-gradient-to-r from-[#FFCC00] to-yellow-500 
+                           hover:from-yellow-500 hover:to-[#FFCC00] text-main-900 font-bold py-4 px-8 
+                           rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 
+                           transition-all duration-300">
+            <HiBell className="text-xl group-hover:animate-pulse" />
+            <span>Enable Notifications</span>
+          </button>
         </div>
       </section>
     </>

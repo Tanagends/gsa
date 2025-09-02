@@ -1,13 +1,14 @@
 import { createClient } from '@/prismicio';
+import Link from 'next/link';
+import Gallery from './Gallery';
 import { revalidateTag } from "next/cache";
-import MediaContent from './MediaContent';
 
 export const metadata = {
   title: 'Generational Stewards for Antimicrobials | Media and Activity Gallery',
   keywords: [
     "antimicrobial resistance",
     "AMR advocacy",
-    "global health activities", 
+    "global health activities",
     "media gallery",
     "non-profit Zimbabwe",
     "AMR education",
