@@ -4,7 +4,8 @@ import { useState, useEffect, useRef } from 'react'
 import { HiArrowRight, HiSparkles, HiShieldCheck, HiClock } from 'react-icons/hi2'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { DonateButton } from './DonateButton'
+import DonateButton from './DonateButton'
+import { motion } from "framer-motion";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -212,10 +213,32 @@ const CTASection = () => {
           {/* Primary CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             
-            {/* Donate Button - Using imported component */}
+            {/* Donate Button - Using imported component 
             <div className="transform hover:scale-105 transition-transform duration-300">
               <DonateButton />
-            </div>
+            </div> */}
+            {/* Donate Button - Primary */}
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <Link 
+                href="/contactus"
+                className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-[#FFCC00] to-yellow-500 
+                         hover:from-yellow-500 hover:to-[#FFCC00] text-main-900 font-black text-lg py-5 px-10 
+                         rounded-full shadow-2xl hover:shadow-[#FFCC00]/50 transition-all duration-300
+                         before:absolute before:inset-0 before:rounded-full before:bg-white before:opacity-0 
+                         hover:before:opacity-20 before:transition-opacity overflow-hidden"
+              >
+                <span className="relative z-10">DONATE NOW</span>
+                <HiArrowRight className="relative z-10 text-xl group-hover:translate-x-1 transition-transform" />
+                
+                {/* Pulse effect */}
+                <div className="absolute inset-0 rounded-full">
+                  <div className="absolute inset-0 rounded-full bg-[#FFCC00] animate-ping opacity-30"></div>
+                </div>
+              </Link>
+            </motion.div>
 
             {/* Join Button - Links to contact */}
             <Link 
@@ -265,7 +288,7 @@ const CTASection = () => {
             {
               icon: "🤝",
               title: "Partner With Us",
-              description: "Amplify your CSR impact",
+              description: "Amplify your impact",
               color: "from-blue-400/20 to-blue-500/10"
             }
           ].map((card, index) => (
@@ -322,4 +345,4 @@ const CTASection = () => {
   )
 }
 
-export default CTASection
+export default CTASection;
