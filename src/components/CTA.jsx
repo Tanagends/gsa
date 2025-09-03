@@ -265,7 +265,7 @@ const CTASection = () => {
             {
               icon: "🤝",
               title: "Partner With Us",
-              description: "Amplify your impact",
+              description: "Amplify your CSR impact",
               color: "from-blue-400/20 to-blue-500/10"
             }
           ].map((card, index) => (
