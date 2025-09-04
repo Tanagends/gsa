@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.gsaglobal.org.zw
+
+# Sitemaps
+Sitemap: https://www.gsaglobal.org.zw/sitemap.xml

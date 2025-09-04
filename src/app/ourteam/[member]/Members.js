@@ -1,5 +1,3 @@
-import { image } from "framer-motion/client";
-
 const Members = {
             ngonimuzondo:{
             id:'ngonimuzondo',
@@ -399,6 +397,8 @@ const Old_Members = {
                 ]
                 },    
         }
+
+export const {members} = Members
 
 export default Members
 
