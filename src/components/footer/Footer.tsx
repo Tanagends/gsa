@@ -47,7 +47,7 @@ const Footer = () => {
                         <Link href="/" className="flex items-center gap-4 group">
                             <div className="w-16 h-16 bg-white rounded-full p-1.5 shadow-2xl group-hover:scale-110 transition-transform">
                                 <Image
-                                    src="/assets/images/logo.jpg"
+                                    src="/assets/images/logo.webp"
                                     alt="GSA Global Logo"
                                     width={64}
                                     height={64}

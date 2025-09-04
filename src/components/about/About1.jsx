@@ -11,19 +11,19 @@ const aboutContent = [
   {
     id: 'who-we-are',
     title: 'Who We Are',
-    image: '/assets/images/bg-1.jpeg', // Add a relevant, vibrant image
+    image: '/assets/images/bg-1.webp', // Add a relevant, vibrant image
     text: "We are dedicated to fostering innovation and advocacy in our health and awareness campaigns, specifically focusing on Antimicrobial Resistance (AMR). Our primary goal is to promote and empower stewardship among primary and secondary school students. By raising awareness and providing education, we aim to instil a sense of responsibility and understanding of AMR in the younger generation. We are inculcating a culture of social responsibility among young people to mitigate the threat of the spread of antimicrobial resistance in African communities using a One Health Approach. We are a catalyst organization and we achieve this by empowering young people, especially tertiary level students, and recent graduates by designing relevant programs that can trigger their interests and equip them with appropriate skills that mould them to be the next change-makers, opinion leaders, and hopefully pursue a career in the AMR sector. This is achieved through regular training and mentorship programs.",
   },
   {
     id: 'mission',
     title: 'Our Mission',
-    image: '/assets/images/bg-1.jpeg', // Add a relevant, vibrant image
+    image: '/assets/images/bg-1.webp', // Add a relevant, vibrant image
     text: "We are committed to empowering the next generation as champions and advocates for responsible antimicrobial use. Our mission is to cultivate a community of student leaders dedicated to combating antimicrobial resistance (AMR) through research, innovation, and social responsibility. We provide a dynamic platform for learning and action through engaging educational programs, the creation of collaborative AMR clubs, and mentorship opportunities designed to nurture student ideas. By connecting these future leaders with relevant stakeholders, we aim to facilitate impactful collaborations and pave the way for student-led solutions to flourish and create lasting change in the fight against AMR.",
   },
   {
     id: 'vision',
     title: 'Our Vision',
-    image: '/assets/images/bg-1.jpeg', // Add a relevant, vibrant image
+    image: '/assets/images/bg-1.webp', // Add a relevant, vibrant image
     text: "Our vision is to empower and educate young people to understand and tackle antimicrobial resistance (AMR) by fostering innovative solutions. We aim to engage and equip the next generation to actively contribute to global efforts in addressing this critical health threat.",
   },
 ];

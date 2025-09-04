@@ -8,7 +8,7 @@ export const metadata = {
   description:
     "Generational Stewards for Antimicrobials is dedicated to empowering the next generation to combat antimicrobial resistance (AMR) through education, innovation, and advocacy. Learn about our mission, vision, and programs fostering responsible antimicrobial use and global health solutions.",
   icons: {
-    icon: '/assets/images/logo.jpg'
+    icon: '/assets/images/logo.webp'
   },
   author: "Generational Stewards for Antimicrobials",
   og: {

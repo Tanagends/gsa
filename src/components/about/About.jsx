@@ -12,7 +12,7 @@ const aboutContent = [
     id: 'who-we-are',
     title: 'Who We Are',
     subtitle: 'Catalysts for Change',
-    image: '/assets/images/bg-1.jpeg',
+    image: '/assets/images/bg-1.webp',
     shortText: "We are dedicated to fostering innovation and advocacy in health awareness campaigns, specifically focusing on Antimicrobial Resistance (AMR). Our primary goal is to promote stewardship among students and empower the next generation.",
     fullText: "We are dedicated to fostering innovation and advocacy in our health and awareness campaigns, specifically focusing on Antimicrobial Resistance (AMR). Our primary goal is to promote and empower stewardship among primary and secondary school students. By raising awareness and providing education, we aim to instil a sense of responsibility and understanding of AMR in the younger generation. We are inculcating a culture of social responsibility among young people to mitigate the threat of the spread of antimicrobial resistance in African communities using a One Health Approach.",
     highlights: [
@@ -26,7 +26,7 @@ const aboutContent = [
     id: 'mission',
     title: 'Our Mission',
     subtitle: 'Empowering Tomorrow\'s Leaders',
-    image: '/assets/images/bg-1.jpeg',
+    image: '/assets/images/bg-1.webp',
     shortText: "We are committed to empowering the next generation as champions for responsible antimicrobial use. We cultivate student leaders dedicated to combating AMR through research, innovation, and social responsibility.",
     fullText: "We are committed to empowering the next generation as champions and advocates for responsible antimicrobial use. Our mission is to cultivate a community of student leaders dedicated to combating antimicrobial resistance (AMR) through research, innovation, and social responsibility. We provide a dynamic platform for learning and action through engaging educational programs, the creation of collaborative AMR clubs, and mentorship opportunities designed to nurture student ideas.",
     highlights: [
@@ -40,7 +40,7 @@ const aboutContent = [
     id: 'vision',
     title: 'Our Vision',
     subtitle: 'A Resistant-Free Future',
-    image: '/assets/images/bg-1.jpeg',
+    image: '/assets/images/bg-1.webp',
     shortText: "Our vision is to empower and educate young people to understand and tackle antimicrobial resistance by fostering innovative solutions for this critical global health threat.",
     fullText: "Our vision is to empower and educate young people to understand and tackle antimicrobial resistance (AMR) by fostering innovative solutions. We aim to engage and equip the next generation to actively contribute to global efforts in addressing this critical health threat.",
     highlights: [

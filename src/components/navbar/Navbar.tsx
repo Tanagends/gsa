@@ -58,7 +58,7 @@ const Navbar = () => {
 
                 <Link href="/" className="flex items-center gap-2 z-50">
                     <div className="w-12 h-12 bg-white rounded-full p-1 shadow-md">
-                        <Image src="/assets/images/logo.jpg" alt="GSA Global Logo" width={48} height={48} className="rounded-full" />
+                        <Image src="/assets/images/logo.webp" alt="GSA Global Logo" width={48} height={48} className="rounded-full" />
                     </div>
                     <span className={`font-bold text-xl transition-colors text-white hover:text-main2`}>GSA Global</span>
                 </Link>

@@ -209,7 +209,7 @@ layer utilities {
 
 /* hero section */
 .hero {
-    background-image: url('/assets/images/pcBg.jpeg');
+    background-image: url('/assets/images/pcBg.webp');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -222,7 +222,7 @@ layer utilities {
 
 @media (max-width: 640px) {
 .hero {
-    background-image: url('/assets/images/mbBg.jpeg');
+    background-image: url('/assets/images/mbBg.webp');
     }
 }
 
@@ -308,7 +308,7 @@ layer utilities {
 
 /* contact us */
 .contacts-section{
-    background-image: url('/assets/images/bg-1.jpeg');
+    background-image: url('/assets/images/bg-1.webp');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

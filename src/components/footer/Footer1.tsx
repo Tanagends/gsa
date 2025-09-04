@@ -34,14 +34,14 @@ const Footer = () => {
 
     return (
         <footer className="bg-gradient-to-br from-main-700 to-main-600 text-white pt-20 pb-10 relative overflow-hidden">
-            <div className="absolute inset-0 bg-[url('/assets/images/footer-pattern.png')] opacity-10"></div>
+            <div className="absolute inset-0 bg-[url('/assets/images/footer-pattern.webp')] opacity-10"></div>
             <div className="container mx-auto px-6 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     <div className="space-y-6">
                         <Link href="/" className="flex items-center gap-4 group">
                             <div className="w-16 h-16 bg-white rounded-full p-1.5 shadow-lg transform group-hover:scale-105 transition-transform duration-300">
                                 <Image 
-                                    src="/assets/images/logo.jpg" 
+                                    src="/assets/images/logo.webp" 
                                     alt="GSA Global Logo" 
                                     width={64} 
                                     height={64} 

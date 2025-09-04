@@ -211,7 +211,7 @@ export default function ContactPage() {
         {/* Hero Image Overlay */}
         <div className="absolute inset-0 opacity-20">
           <Image
-            src="/assets/images/pcBg.jpeg"
+            src="/assets/images/pcBg.webp"
             alt="Contact us header image"
             layout="fill"
             objectFit="cover"

@@ -16,25 +16,25 @@ const partnersData = [
     name: "Zimbabwe Youth Council",
     description: "A key government body dedicated to empowering and developing the youth of Zimbabwe.",
     link: "https://www.linkedin.com/company/zim-youth-council/",
-    image: '/assets/images/zyc.jpg'
+    image: '/assets/images/zyc.webp'
   },
   {
     name: "African Youth Antimicrobial Resistance Alliance",
     description: "A taskforce focused on mobilizing African youth to combat the threat of AMR.",
     link: "https://www.linkedin.com/company/ayara-tf/",
-    image: '/assets/images/ayr.jpg'
+    image: '/assets/images/ayr.webp'
   },
   {
     name: "Stop Superbugs Network",
     description: "An initiative raising awareness and advocating for urgent action against superbugs.",
     link: "https://x.com/theurgentneed?s=11",
-    image: '/assets/images/stop.jpg'
+    image: '/assets/images/stop.webp'
   },
   {
     name: 'ReAct Africa',
     description: "Part of a global network dedicated to addressing antibiotic resistance in Africa.",
     link: 'https://www.reactgroup.org/about-us/a-global-network/react-africa/',
-    image: '/assets/images/react.png'
+    image: '/assets/images/react.webp'
   }
 ];
 
