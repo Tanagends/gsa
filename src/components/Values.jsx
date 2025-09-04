@@ -11,53 +11,45 @@ const Values = () => {
 
   const values = [
     {
-      title: "Dedication",
+      title: "Commitment",
       icon: Target,
-      description: "Unwavering commitment to excellence and continuous improvement in every endeavor",
+      description: "We are dedicated to the fight against antimicrobial resistance and improving public health.",
       gradient: "from-[#9A0000] via-[#b33333] to-[#cc6666]",
       bgGradient: "from-[#9A0000]/20 to-[#cc6666]/20",
       metrics: "99% Success Rate"
     },
     {
-      title: "Empathy",
-      icon: Heart,
-      description: "Understanding and connecting with every individual we serve on a deeper level",
-      gradient: "from-[#13d4f7] via-[#14b8d4] to-[#109eb8]",
-      bgGradient: "from-[#13d4f7]/20 to-[#109eb8]/20",
-      metrics: "10K+ Lives Touched"
-    },
-    {
-      title: "Innovation",
-      icon: Zap,
-      description: "Relentless pursuit of groundbreaking solutions that transform industries",
-      gradient: "from-[#FFCC00] via-[#ffd633] to-[#ffe066]",
-      bgGradient: "from-[#FFCC00]/20 to-[#ffe066]/20",
-      metrics: "50+ Innovations"
-    },
-    {
       title: "Collaboration",
       icon: Users,
-      description: "Synergistic teamwork that amplifies our collective potential exponentially",
+      description: "We foster partnerships with diverse stakeholders to achieve common goals.",
       gradient: "from-[#0b6b7c] via-[#0e8aa0] to-[#109eb8]",
       bgGradient: "from-[#0b6b7c]/20 to-[#109eb8]/20",
       metrics: "200+ Partners"
     },
     {
-      title: "Community Focus",
-      icon: Compass,
-      description: "Building meaningful, lasting connections at every level of society",
-      gradient: "from-[#9A0000] via-[#13d4f7] to-[#FFCC00]",
-      bgGradient: "from-[#9A0000]/20 to-[#FFCC00]/20",
-      metrics: "Global Reach"
+      title: "Innovation",
+      icon: Zap,
+      description: "Encouraging creative solutions and new ideas to address AMR challenges.",
+      gradient: "from-[#FFCC00] via-[#ffd633] to-[#ffe066]",
+      bgGradient: "from-[#FFCC00]/20 to-[#ffe066]/20",
+      metrics: "50+ Innovations"
     },
     {
       title: "Empowerment",
       icon: Award,
-      description: "Enabling individuals and communities to achieve their absolute fullest potential",
+      description: "We equip young people with the skills and knowledge needed to lead initiatives.",
       gradient: "from-[#13d4f7] via-[#FFCC00] to-[#9A0000]",
       bgGradient: "from-[#13d4f7]/20 to-[#9A0000]/20",
       metrics: "Unlimited Growth"
-    }
+    },
+    {
+      title: "Integrity",
+      icon: Heart,
+      description: "We hold ethical standards and transparency in all activities",
+      gradient: "from-[#13d4f7] via-[#14b8d4] to-[#109eb8]",
+      bgGradient: "from-[#13d4f7]/20 to-[#109eb8]/20",
+      metrics: "10K+ Lives Touched"
+    },
   ];
 
   useEffect(() => {
