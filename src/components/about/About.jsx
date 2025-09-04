@@ -13,8 +13,8 @@ const aboutContent = [
     title: 'Who We Are',
     subtitle: 'Catalysts for Change',
     image: '/assets/images/bg-1.webp',
-    shortText: "We are dedicated to fostering innovation and advocacy in health awareness campaigns, specifically focusing on Antimicrobial Resistance (AMR). Our primary goal is to promote stewardship among students and empower the next generation.",
-    fullText: "We are dedicated to fostering innovation and advocacy in our health and awareness campaigns, specifically focusing on Antimicrobial Resistance (AMR). Our primary goal is to promote and empower stewardship among primary and secondary school students. By raising awareness and providing education, we aim to instil a sense of responsibility and understanding of AMR in the younger generation. We are inculcating a culture of social responsibility among young people to mitigate the threat of the spread of antimicrobial resistance in African communities using a One Health Approach.",
+    shortText: "The Generational Stewards for Antimicrobials (GSA) is a youth-led  organization established in 2021, registered under the Zimbabwe Youth Council. We are dedicated to fostering education, innovation and advocacy",
+    fullText: "The Generational Stewards for Antimicrobials (GSA) is a youth-led  organization established in 2021, registered under the Zimbabwe Youth Council. We are dedicated to fostering education, innovation and advocacy that improves understanding of the health, agricultural, environmental, socioeconomic and developmental impacts of Antimicrobial Resistance (AMR) in communities at high risk. As a pioneering member of the African Youth AMR Alliance Task Force (AYARA -TF) and Global AMR Multistakeholder Platform, we are uniquely positioned to amplify youth voices in the global AMR discourse.",
     highlights: [
       "Empowering young change-makers",
       "One Health Approach implementation",
@@ -27,8 +27,8 @@ const aboutContent = [
     title: 'Our Mission',
     subtitle: 'Empowering Tomorrow\'s Leaders',
     image: '/assets/images/bg-1.webp',
-    shortText: "We are committed to empowering the next generation as champions for responsible antimicrobial use. We cultivate student leaders dedicated to combating AMR through research, innovation, and social responsibility.",
-    fullText: "We are committed to empowering the next generation as champions and advocates for responsible antimicrobial use. Our mission is to cultivate a community of student leaders dedicated to combating antimicrobial resistance (AMR) through research, innovation, and social responsibility. We provide a dynamic platform for learning and action through engaging educational programs, the creation of collaborative AMR clubs, and mentorship opportunities designed to nurture student ideas.",
+    shortText: "To empower a generation of youths and young professionals in Zimbabwe to become champions of AMR awareness",
+    fullText: "To empower a generation of youths and young professionals in Zimbabwe to become champions of AMR awareness, promoting responsible antimicrobial use, supporting broader infection prevention and control programs, and lobbying for mobilisation of resources for sustainable capacity development for translational research that benefits communities at high risk.`",
     highlights: [
       "Student-led AMR solutions",
       "Collaborative research programs",
@@ -41,8 +41,8 @@ const aboutContent = [
     title: 'Our Vision',
     subtitle: 'A Resistant-Free Future',
     image: '/assets/images/bg-1.webp',
-    shortText: "Our vision is to empower and educate young people to understand and tackle antimicrobial resistance by fostering innovative solutions for this critical global health threat.",
-    fullText: "Our vision is to empower and educate young people to understand and tackle antimicrobial resistance (AMR) by fostering innovative solutions. We aim to engage and equip the next generation to actively contribute to global efforts in addressing this critical health threat.",
+    shortText: "To inculcate a culture of social responsibility among youths aged 15-35, in Zimbabwe (especially students in higher and Tertiary institutions) and  early careers (from different disciplines) that encourages active participation in national, regional and global AMR mitigation efforts.",
+    fullText: "We aim to trigger continuity of awareness initiatives and collaborate with partners committed to  substantial reduction in AMR-related morbidity and mortality within the next 10 years, while promoting responsible antimicrobial use and stewardship that benefits communities at high risk. Our approach will integrate complementary interventions, such as climate resilient Water Sanitation and Hygiene (WASH), a critical component of Infection Prevention Control (IPC) initiatives, towards a holistic understanding of AMR and its impact on human, animal, and environmental health.",
     highlights: [
       "Global AMR awareness",
       "Youth-driven innovation",

@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { useState } from "react"
 import { 
-  HiEnvelope, HiPhone, HiGlobeAlt
+  HiEnvelope, HiPhone
 } from 'react-icons/hi2'
 
 const MemberCard = ({name, surname, title, imageExtention, id, socials, department}) => {
