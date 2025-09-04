@@ -6,7 +6,7 @@ const Members = {
             name:'Ngoni',
             surname:'Muzondo',
             title:'Chairperson',
-            imageExtention:'jpg',
+            imageExtention:'webp',
             socials:{
                 twitter:'https://x.com/PowerMaster_tm',
                 email:'ngonimuzondo9@gmail.com',
@@ -33,7 +33,7 @@ const Members = {
             name:'Munyaradzi',
             surname:'Chisora',
             title:'Vice Chairperson',
-            imageExtention:'jpg',
+            imageExtention:'webp',
             socials:{
                 twitter:null,
                 email:'munya.sachis@gmail.com',
@@ -58,7 +58,7 @@ const Members = {
             name:'Dr Marry',
             surname:'Mwashita',
             title:'Research and Data Lead',
-            imageExtention:'png',
+            imageExtention:'webp',
             socials:{
                 linkedin:'https://zw.linkedin.com/in/dr-mary-mwashita-49284a108',
                 phone:'+263773128326'
@@ -78,7 +78,7 @@ const Members = {
             name:'Tafadzwa',
             surname:'Chirisa',
             title:'Finance Director',
-            imageExtention:'jpg',
+            imageExtention:'webp',
             socials:{
                 twitter:'https://x.com/taffychirisa?s=09null',
                 email:'chirisatafadzwa2019@gmail.com',
@@ -96,7 +96,7 @@ const Members = {
         name:"Arthur",
         surname:"Magaso",
         title:"Media & Communications Officer",
-        imageExtention:"jpg",
+        imageExtention:"webp",
         socials:{
             linkedin: "www.linkedin.com/in/arthur-magaso-221349312",
             email:"arthur.magaso@gmail.com",
@@ -116,7 +116,7 @@ const Members = {
         name:"Tendai",
         surname:"Munetsi",
         title:"Research and Data Officer",
-        imageExtention:"JPG",
+        imageExtention:"webp",
         socials:{
             phone: "+263777197154",
             email: "tenmunetsi@gmail.com"
@@ -137,7 +137,7 @@ const Members = {
         name:"Shiloh Vongai",
         surname:"Paswani",
         title:"Member",
-        imageExtention:'jpeg',
+        imageExtention:'webp',
         socials:{
             website:"http://shilohvonpaswani.blogspot.com/"
         },
@@ -153,7 +153,7 @@ const Members = {
         name:"Thabani",
         surname:"Ncube",
         title:"Youth and Engagement Officer",
-        imageExtention:"jpg",
+        imageExtention:"webp",
         socials:{
             email:"ncubethabani094@gmail.com"
         },
@@ -166,7 +166,7 @@ const Members = {
             name:'Olive',
             surname:'Thomas',
             title:'Communications Director',
-            imageExtention:'jpeg',
+            imageExtention:'webp',
             socials:{
                 twitter:null,
                 email:'thomasolive195@gmail.com',
@@ -186,7 +186,7 @@ const Members = {
             name:"Aisha",
             surname:"Hundah",
             title:"Youth and Engagement Officer",
-            imageExtention:"jpg",
+            imageExtention:"webp",
             socials:{
                 email:"aishafarirai@gmail.com"
             },
@@ -201,7 +201,7 @@ const Members = {
         name:"Previous",
         surname:"Chiruka",
         title:"Education and Scientific Lead ",
-        imageExtention:"jpg",
+        imageExtention:"webp",
         socials:{
             email:"chirukaprevious@gmail.com"
         },
@@ -214,7 +214,7 @@ const Members = {
             name:'Paradzai',
             surname:'Njazi',
             title:'Research Officer',
-            imageExtention:'jpg',
+            imageExtention:'webp',
             socials:{
                 twitter:'https://x.com/innocent_2802?t=emNu7Nnik2OWIZnrcYB9lg&s=09',
                 email:'plnnonjazi@gmail.com',
@@ -233,7 +233,7 @@ const Old_Members = {
             name:'Brandon',
             surname:'Jaka',
             title:'Media Advisor',
-            imageExtention:'jpg',
+            imageExtention:'webp',
             socials:{
                 twitter:null,
                 email:'brandonjaka3@gmail.com',
@@ -258,7 +258,7 @@ const Old_Members = {
             name:'Munyaradzi',
             surname:'Tagara',
             title:'Clubs Coordinator',
-            imageExtention:'jpg',
+            imageExtention:'webp',
             socials:{
                 twitter:'https://x.com/innocent_2802?t=emNu7Nnik2OWIZnrcYB9lg&s=09',
                 email:'tagaramunyaradzi2802@gmail.com',
@@ -289,7 +289,7 @@ const Old_Members = {
             name:'Oscar',
             surname:'Mano',
             title:'Education and Scientific Officer',
-            imageExtention:'jpg',
+            imageExtention:'webp',
             socials:{
                 twitter:'https://twitter.com/docmano',
                 email:'oscarmano98@gmail.com',
@@ -308,7 +308,7 @@ const Old_Members = {
             name:'Nokukhanya',
             surname:'Mabhena',
             title:'Vice Secretary General',
-            imageExtention:'jpg',
+            imageExtention:'webp',
             socials:{
                 twitter:'https://x.com/KhanyaMabhena?t=D88S2thBHaCboF2wrESagg&s=08',
                 email:'nokkhanymabhena@gmail.com',
@@ -326,7 +326,7 @@ const Old_Members = {
             name:'Varaidzo',
             surname:'Mukwekwe',
             title:'Youth Engagement Officer',
-            imageExtention:'jpg',
+            imageExtention:'webp',
             socials:{
                 twitter:null,
                 email:'vjmukwekwe@gmail.com',
@@ -344,7 +344,7 @@ const Old_Members = {
             name:'Vincent',
             surname:'Nyereyemhuka',
             title:'Newsletter Editor',
-            imageExtention:'jpg',
+            imageExtention:'webp',
             socials:{
                 twitter:'https://x.com/92_vinc?t=4o-9Y_zkTzcHgZngGPWr9g&s=08',
                 email:'vnyereyemhuka@gmail.com',
@@ -364,7 +364,7 @@ const Old_Members = {
             name:'Michelle',
             surname:'Van Der Heiden',
             title:'Secretary General',
-            imageExtention:'jpg',
+            imageExtention:'webp',
             socials:{
                 twitter:'https://x.com/MichelleVanDH?t=NsMt59ycnayaeUhyfdmrfw&s=09',
                 email:null,
@@ -382,7 +382,7 @@ const Old_Members = {
                 name:'Shawn Tapiwa',
                 surname:'Chikuku',
                 title:'Monitoring and Evaluation officer',
-                imageExtention:'jpg',
+                imageExtention:'webp',
                 socials:{
                     twitter:"https://x.com/TapiwaShaw42039?t=uNWzireznWu6uHNFTAWZ3w&s=09",
                     email:"shawntapiwachikuku@gmail.com",
