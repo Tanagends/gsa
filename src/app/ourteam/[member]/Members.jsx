@@ -1,3 +1,5 @@
+import { image } from "framer-motion/client";
+
 const Members = {
             ngonimuzondo:{
             id:'ngonimuzondo',
@@ -71,6 +73,65 @@ const Members = {
                 'and cross-sector collaboration.'
             ]
         },
+        tafadzwachirisa:{
+            id:'tafadzwachirisa',
+            name:'Tafadzwa',
+            surname:'Chirisa',
+            title:'Finance Director',
+            imageExtention:'jpg',
+            socials:{
+                twitter:'https://x.com/taffychirisa?s=09null',
+                email:'chirisatafadzwa2019@gmail.com',
+                phone:'+263774311932',
+                linkedin:'https://www.linkedin.com/in/tafadzwa-chirisa-b06b32212?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+                facebook:'https://www.facebook.com/share/15uQGa7rJz/',
+                instagram:"https://www.instagram.com/taffy.cee?igsh=MXVzYTdsa3VhdGNzYg==",
+            },
+            bio: [
+                'Tafadzwa Chirisa is a dynamic young finance director at Generational Stewards Against Antimicrobials (GSA) and a dedicated community pharmacist with two years of hands-on experience. With a keen interest in public health, Tafadzwa champions the fight against antimicrobial resistance (AMR) through innovative financial strategies and community engagement. Passionate about empowering future generations, she leads initiatives that educate the public on responsible antimicrobial use. Tafadzwa envisions a healthier world where effective treatments are safeguarded, combining her financial acumen with a commitment to impactful public health solutions.'
+            ]
+        },
+    authurmagaso:{
+        id:"arthurmagaso",
+        name:"Arthur",
+        surname:"Magaso",
+        title:"Media & Communications Officer",
+        imageExtention:"jpg",
+        socials:{
+            linkedin: "www.linkedin.com/in/arthur-magaso-221349312",
+            email:"arthur.magaso@gmail.com",
+        },
+        bio:[
+            'Arthur Magaso is a professional Graphic Designer and Health Content Creator, with a clinical educational'+
+            'background in Nursing Science from the University of Zimbabwe. As the current Media & Communications'+
+            'Officer at GSA, he leverages this combination to produce high-quality and well-informed visuals aimed'+
+            'at improving the public’s awareness and knowledge concerning Antimicrobial Resistance. Arthur is also'+
+            'a public health enthusiast, with a particular interest in Mental Health, and holds a W.H.O Diploma'+
+            'Certificate in Mental Health, Recovery and Community Inclusion.  He aspires to make meaningful'+
+            'contributions in combating antimicrobial resistance through raising public awareness on AMR.'
+        ]
+    },
+    tendaimunetsi:{
+        id:"tendaimunetsi",
+        name:"Tendai",
+        surname:"Munetsi",
+        title:"Research and Data Officer",
+        imageExtention:"JPG",
+        socials:{
+            phone: "+263777197154",
+            email: "tenmunetsi@gmail.com"
+        },
+        bio:[
+            'I am a public health specialist with a Master’s Degree in Public Health (FETP) and extensive'+
+            'experience in disease surveillance, outbreak investigations, emergency preparedness, and data'+
+            'driven health interventions. I am passionate about tackling antimicrobial resistance (AMR)'+
+            'and developing culturally grounded programs that promote awareness and stewardship across'+
+            'communities. My expertise spans implementation research, health systems planning, and'+
+            'translating evidence into actionable policy. I thrive at the intersection of strong epidemiologic'+
+            'skills and responsive programming, driving sustainable solutions that improve public health'+
+            'outcomes.'
+        ]
+    },
     shilohpaswani:{
         id:"shilohpaswani",
         name:"Shiloh Vongai",
@@ -86,7 +147,84 @@ const Members = {
             'Shiloh\'s philanthropic endeavors extend to her involvement with the Doctors and Nurses on a Mission Trust, where she collaborates with like-minded individuals to provide essential healthcare services to marginalized communities. Through public platforms and compelling storytelling, she tirelessly raises awareness about critical health issues, including HIV/AIDS, Non-Communicable Diseases, and Antimicrobial Resistance (AMR).',
             'Shiloh\'s passion, leadership acumen, and selfless dedication to improving community health make her an inspiring role model for her peers and a valuable asset to the healthcare sector.',
         ]
-    } 
+    },
+    thabanincube:{
+        id:"thabanincube",
+        name:"Thabani",
+        surname:"Ncube",
+        title:"Youth and Engagement Officer",
+        imageExtention:"jpg",
+        socials:{
+            email:"ncubethabani094@gmail.com"
+        },
+        bio:[
+            'Thabani Ncube is the Youth and Engagement Officer at Generational Stewards for Antimicrobials (GSA), and a pharmacy student at the Harare Institute of Technology. He is passionate about advancing youth-led action against antimicrobial resistance (AMR) through health education, advocacy, and innovation. Thabani is currently participating in the AMR Leadership Program (Cohort 2) and has led several community-based awareness campaigns. He also serves as the National Education Officer for the Zimbabwe Pharmaceutical Students Association. Thabani is committed to mobilizing young people across all levels of education to become active stakeholders in the global AMR response.'
+        ]
+    },
+        olivethomas: {
+            id:'olivethomas',
+            name:'Olive',
+            surname:'Thomas',
+            title:'Communications Director',
+            imageExtention:'jpeg',
+            socials:{
+                twitter:null,
+                email:'thomasolive195@gmail.com',
+                phone:'+263782232149',
+                linkedin:'http://linkedin.com/in/olive-thomas',
+                facebook:null,
+                instagram:null,
+            },
+            bio:[
+                'Olive Thomas is a medical laboratory scientist who currently serves as the Head of Public Relations at Generational Stewards for Antimicrobials. In this role, she orchestrates the flow of information between the organization and the public, including championing a smooth moderation of GSA\'s fortnight webinars of global conversations.'+ 
+                'Olive is a global public health enthusiast who aspires to make meaningful contributions in global health initiatives aiming to promote wellness in communities through research, education and advocacy.'+
+                'Olive\'s commitment to personal and professional development is evident through her participation in different international leadership programs, further equipping herself to drive positive change and contribute to GSA\'s success.'
+            ]
+        },
+        aishafarirai:{
+            id:"aishahundah",
+            name:"Aisha",
+            surname:"Hundah",
+            title:"Youth and Engagement Officer",
+            imageExtention:"jpg",
+            socials:{
+                email:"aishafarirai@gmail.com"
+            },
+            bio:[
+                'I am a dedicated Youth and Engagement Officer at Generational Stewards for Antimicrobials Zimbabwe, passionately committed to advancing public health through community outreach and policy advocacy. With a BSc Honors degree in Public Administration and Management, I specialize in implementing policies that strengthen the fight against Antimicrobial Resistance (AMR).',
+                'My professional journey is deeply rooted in public health, where I actively engage youth and communities to raise awareness about the prudent use of antimicrobials and the critical importance of preserving their effectiveness. Through targeted outreach programs, I strive to empower the next generation to become informed stewards in combating AMR.',
+                'Looking ahead, I am optimistic and determined to contribute significantly to reducing the threat of antimicrobial resistance in Zimbabwe. By fostering collaboration between policymakers, healthcare providers, and the public, I envision a healthier future where effective antimicrobials remain a cornerstone of medical treatment.'
+            ]
+        },
+    previouschiruka:{
+        id:"previouschiruka",
+        name:"Previous",
+        surname:"Chiruka",
+        title:"Education and Scientific Lead ",
+        imageExtention:"jpg",
+        socials:{
+            email:"chirukaprevious@gmail.com"
+        },
+        bio:[
+            'Hi, l am Chiruka Previous Rutendo, a medical scientist in microbiology and biotechnology registered by MLCSCZ.My research focuses on investigating TB-HIV confection improving treatment outcomes at the same time on how to reduce resistance.l am the Education and Scientific Lead at Generational Stewards for Antimicrobials and with my background in laboratory research and clinical trials l aim to collaborate with the research team to ensure that educational content is scientifically accurate and up to date at the same time understanding the AMR mechanisms and develope novel therapeutic strategy to tackle AMR.I am striving to contribute to the development of effective treatments and vaccines for global health challenges.'
+        ]
+    },
+        paradzainjazi:{
+            id:'paradzainjazi',
+            name:'Paradzai',
+            surname:'Njazi',
+            title:'Research Officer',
+            imageExtention:'jpg',
+            socials:{
+                twitter:'https://x.com/innocent_2802?t=emNu7Nnik2OWIZnrcYB9lg&s=09',
+                email:'plnnonjazi@gmail.com',
+                phone:'+263778443301',
+                linkedin:'https://www.linkedin.com/in/munyaradzi-innocent-4b4752254',
+            },
+            bio:[
+                'Paradzai Innocent Njazi holds a Bachelor of Science degree in Nursing Science from the University of Zimbabwe and currently serves as a part-time tutor at Karanda Mission Hospital. His advocacy for antimicrobial resistance (AMR) began in his second year at the University of Zimbabwe when he encountered clinical cases. As the Co-founder and Operational Affairs Officer at Generational Stewards for Antimicrobials, he is deeply committed to mitigating AMR. In a bid to raise awareness, he has published articles, been involved in awareness campaigns, and attended conferences, all of which have significantly contributed to fostering a deeper understanding of the issues and engaging the community in meaningful discussions.Has earned certificates in leadership from Harvard University and AMR stewardship from the World Health Organization.'
+            ]
+        },
 };
 
 const Old_Members = {
@@ -113,26 +251,6 @@ const Old_Members = {
                 ' is a Media advisor working on visuals and designs which encompass fliers, posters, branding e.t.c'+
                 ' Brandon is passionate about Global health and advocates for SDGs which calls for good health and'+
                 ' well-being.',
-            ]
-        },
-        tafadzwachirisa:{
-            id:'tafadzwachirisa',
-            name:'Tafadzwa',
-            surname:'Chirisa',
-            title:'Treasurer',
-            imageExtention:'jpg',
-            socials:{
-                twitter:'https://x.com/taffychirisa?s=09null',
-                email:'chirisatafadzwa2019@gmail.com',
-                phone:'+263774311932',
-                linkedin:'https://www.linkedin.com/in/tafadzwa-chirisa-b06b32212?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
-                facebook:'https://www.facebook.com/tafadzwachirisa.t?mibextid=ZbWKwL',
-                instagram:null,
-            },
-            bio: [
-                'Tafadzwa Chirisa is a dedicated and passionate young Pharmacist with 1 year of experience in community pharmacy. Driven by a desire to make a meaningful impact in the health sector, she is a passionate advocate for patient safety and public health. Tafadzwa is committed to fostering a culture of antimicrobial stewardship and driving measurable improvements in facility antimicrobial use and patient outcomes. She is proud to be part of the team working to ensure the responsible and sustainable use of essential medical resources.',
-                'As a natural leader, Tafadzwa has honed her skills through various roles, including: President of ENACTUS at Harare Institute of Technology, where she leveraged entrepreneurial action to drive progress; Vice President of the Zimbabwe Pharmaceutical Students Association for 2 years, demonstrating her ability to lead and collaborate; Treasurer of GSA, where she currently oversees financial management and reporting, ensuring seamless financial operations and compliance with regulations',
-                'With a strong passion for leadership, community service, and AMR Stewardship, Tafadzwa is poised to make a lasting impact in the healthcare industry'
             ]
         },
         munyaradzitagara:{
@@ -164,52 +282,6 @@ const Old_Members = {
 
                 ' As an aspiring biotechnologist, he is passionate about conducting research in various scientific aspects. His humble'+
                 ' nature and strong work ethic make him a valuable asset to any organization he is a part of.'
-            ]
-        },
-        paradzainjazi:{
-            id:'paradzainjazi',
-            name:'Paradzai',
-            surname:'Njazi',
-            title:'Research Officer',
-            imageExtention:'jpg',
-            socials:{
-                twitter:'https://x.com/innocent_2802?t=emNu7Nnik2OWIZnrcYB9lg&s=09',
-                email:'plnnonjazi@gmail.com',
-                phone:'+263778443301',
-                linkedin:'https://www.linkedin.com/in/munyaradzi-innocent-4b4752254',
-                facebook:null,
-                instagram:null,
-            },
-            bio:[
-                'Paradzai Innocent Njazi holds a BSc in Nursing Science from the University of Zimbabwe. He currently works at Karanda Mission Hospital. He aspires to become a global health figure, with a particular focus on antimicrobial resistance (AMR).',
-                'To bolster his expertise in this area, Mr. Njazi has acquired various AMR-related certificates from prestigious institutions such as the Foundation to Antibiotics Resistance (UK) and ReAct Africa. He also holds a foundation-to-leadership certificate from Harvard University.',
-                'Mr. Njazi has been actively involved in efforts to mitigate AMR through awareness campaigns in secondary schools and by publishing articles on the topic. His dedication to this cause was recognized when he was awarded second place in an international AMR student essay competition.',
-                'Recognizing the knowledge gaps and paucity of data surrounding AMR, Mr. Njazi is spearheading a research team at GSA organization. Through this initiative, he aims to deepen understanding and generate valuable insights that can inform more effective strategies to combat antimicrobial resistance.'
-            ]
-        },
-        olivethomas: {
-            id:'olivethomas',
-            name:'Olive',
-            surname:'Thomas',
-            title:'Communications Director',
-            imageExtention:'jpeg',
-            socials:{
-                twitter:null,
-                email:'thomasolive195@gmail.com',
-                phone:'+263782232149',
-                linkedin:'http://linkedin.com/in/olive-thomas',
-                facebook:null,
-                instagram:null,
-            },
-            bio:[
-                ' Olive Thomas is a medical laboratory scientist who currently serves as the Communications'+
-                ' Director at Generational Stewards for Antimicrobials. In this role, she orchestrates the'+ 
-                ' flow of information between the organization and the public, including championing a smooth'+
-                ' moderation of GSA\'s fortnight webinars of global conversations.'+ 
-                ' Olive is a global public health enthusiast who aspires to make meaningful contributions in global health'+
-                ' initiatives aiming to promote wellness in communities through research, education and advocacy.'+ 
-                ' Olive\'s commitment to personal and professional development is evident through her participation in the'+
-                ' YALI RLC SA programme, further equipping herself to drive positive change and contribute to GSA\'s success.'
             ]
         },
         oscarmano: {
