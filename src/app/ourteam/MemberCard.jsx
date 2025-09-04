@@ -160,6 +160,20 @@ const MemberCard = ({name, surname, title, imageExtention, id, socials, departme
               <i className="bi bi-instagram text-gray-600 group-hover/icon:text-pink-600"></i>
             </Link>
           )}
+          
+          {
+            socials?.website && (
+              <Link 
+                href={socials.website}
+                className="group/icon w-10 h-10 bg-gray-100 hover:bg-blue-100 rounded-lg flex items-center 
+                         justify-center transition-all duration-300 hover:scale-110"
+                title="Website"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="bi bi-globe text-gray-600 group-hover/icon:text-blue-600"></i>
+              </Link>
+            )}
         </div>
       </div>
 

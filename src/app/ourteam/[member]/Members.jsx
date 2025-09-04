@@ -1,9 +1,9 @@
 const Members = {
-        ngonimuzondo:{
+            ngonimuzondo:{
             id:'ngonimuzondo',
             name:'Ngoni',
             surname:'Muzondo',
-            title:'Head of Programs',
+            title:'Chairperson',
             imageExtention:'jpg',
             socials:{
                 twitter:'https://x.com/PowerMaster_tm',
@@ -14,33 +14,24 @@ const Members = {
                 instagram:'https://www.instagram.com/stories/ngonidzashetrymore/',
             },
             bio:[
-                'Ngoni Veddie Muzondo, a dedicated and driven futuristic pharmacist, demonstrates a strong'+
-                ' commitment to scientific research and global health advocacy. Passionate about'+
-                ' antimicrobial resistance (AMR), sexual reproductive health, supply chain management, and'+
-                ' global health, Ngoni\'s interest in AMR stems from academic exposure and global concerns.'+
-                ' He is a graduate of the Antimicrobial Resistance Leadership Program under the guard of'+
-                ' ReAct Africa. Recognizing the urgency of combating AMR, Ngoni co-founded Generational'+
-                ' Stewards for Antimicrobials as the head of programs and team lead to raise awareness and'+
-                ' promote responsible antibiotic use among primary and secondary students. For the past two'+
-                ' years, he has been the youth coordinator for the World Antimicrobial Awareness Week'+
-                ' (WAAW) Zimbabwe National Organizing Committee. He has served as a Contact Person of'+
-                ' the International Pharmaceutical Students Federation (IPSF) to the Zimbabwe'+
-                ' Pharmaceutical Students Association (ZPSA) for the past two years.  Advocating for sexual'+
-                ' reproductive health and rights, with a focus on education, healthcare access, and gender'+
-                ' equality, Ngoni prioritizes empowering vulnerable populations and respecting their rights and'+
-                ' is a Sexual Reproductive Health and Rights (SRHR) peer educator under the training of'+
-                ' SRHR Africa Trust (SAT). He is an alumnus of the African Middle Eastern Leadership Project'+
-                ' (AMELI), the United Nations Millennium Campus Network (UN MCN), and the Aspire'+
-                ' Leadership Program, all of which helped him obtain excellent leadership experience and'+
-                ' International diplomacy.',
+                'Ngoni Muzondo is a dedicated pharmacist with extensive experience in global health research'+
+                'and advocacy. Currently a Preregistration Pharmacist at CIMAS Medical Aid Society Hospital, he'+
+                'oversees cross-border health initiatives and forges strategic partnerships to enhance health'+
+                'outcomes in underserved communities. As the Chairperson of Generational Stewards for'+
+                'Antimicrobial, Ngoni leads educational projects on antimicrobial resistance and contributes to'+
+                'national policy reforms. Additionally, as the Youth Policy and Development Officer at the'+
+                'African Youth Antimicrobial Resistance Alliance Taskforce, he champions youth engagement in'+
+                'AMR policy discussions, ensuring that young voices shape strategies for sustainable health.'+
+                'Ngoni also coordinates campaigns for Pharmacists Against Drug Abuse, promoting prevention'+
+                'strategies among youth across Africa.'            
             ]
         },
         munyaradzichisora:{
             id:'munyaradzichisora',
             name:'Munyaradzi',
             surname:'Chisora',
-            title:'Events Planning Officer',
-            imageExtention:'JPG',
+            title:'Vice Chairperson',
+            imageExtention:'jpg',
             socials:{
                 twitter:null,
                 email:'munya.sachis@gmail.com',
@@ -50,18 +41,55 @@ const Members = {
                 instagram:null,
             },
             bio:[
-                ' Munyaradzi Chisora is a passionate and driven individual with a strong commitment'+
-                ' to social impact. He is a soon-to-be graduate in pharmaceutical sciences from the'+
-                ' University of Zimbabwe, where he has honed his scientific knowledge and analytical'+
-                ' skills. As co-founder and head of events planning for GSA, he demonstrates his leadership'+
-                ' abilities and dedication to community engagement. He is also an alumnus of the Aspire'+
-                ' Leaders Program and UN Millennium Fellowship, showcasing his commitment to global'+
-                ' development. Driven by a desire to empower individuals, Munyaradzi founded Acorn Africa'+
-                ' Connect, a consultancy specializing in soft skills development. He is particularly'+
-                ' interested in Sexual and Reproductive Health and Rights (SRHR) and HIV/AIDS, reflecting'+
-                ' his commitment to improving health outcomes for all.'
+                'Munyaradzi Chisora is a pharmaceutical scientist with a strong interest in global health research and policy advocacy'+
+                'and policy inclusion. He is a co-founder and vice-chairperson of GSA, demonstrating leadership abilities and dedication'+
+                'to mitigating the threat of AMR in Africa. From 2024-2025, he served in the 13th International Pharmaceutical Students'+
+                'Federation (IPSF) African Pharmaceutical Symposium Reception committee hosting the biggest gathering of pharmaceutical'+
+                'students and recent graduates in Africa. He co-founded Acorn Africa Connect, a consultancy specializing in personal and'+
+                'organisational development. Currently, he serves as board chairman for Youth Gate Zimbabwe and in various roles, including'+
+                'the IPSF AMR taskforce and AYARA-TF country communications technicalworking group. He\'s an alumnus of Aspire Leaders'+
+                'Program and UN Millennium Fellowship.'
             ]
         },
+        marrymwashita:{
+            id:'marrymwashita',
+            name:'Dr Marry',
+            surname:'Mwashita',
+            title:'Research and Data Lead',
+            imageExtention:'png',
+            socials:{
+                linkedin:'https://zw.linkedin.com/in/dr-mary-mwashita-49284a108',
+                phone:'+263773128326'
+            },
+            bio:[
+                'Dr. Mary Mwashita is a veterinarian currently pursuing a Master\’s in Public Health with focus on Field'+
+                'Epidemiology. She is passionate about One Health and antimicrobial resistance (AMR). Dr. Mwashita also serves'+
+                'as Secretary of the AMR and Food Security Working Group under the African Youth for Antimicrobial Resistance'+
+                'Alliance Task Force. She also contributed to Zimbabwe\’s efforts in combating Antimicrobial Resistance (AMR)'+
+                'through the AMR Multi-Partner Trust Fund (MPTF) initiative, supporting the implementation of One Health National Action Plan'+
+                'from 2021 to 2025. She is committed to advancing sustainable, evidence-based public health solutions through research, innovation,'+
+                'and cross-sector collaboration.'
+            ]
+        },
+    shilohpaswani:{
+        id:"shilohpaswani",
+        name:"Shiloh Vongai",
+        surname:"Paswani",
+        title:"Member",
+        imageExtention:'jpeg',
+        socials:{
+            website:"http://shilohvonpaswani.blogspot.com/"
+        },
+        bio:[
+            'Meet Shiloh Vongai Paswani, a remarkable 6th-year medical student who has consistently demonstrated exceptional leadership and dedication to community health improvement. As the Deputy Minister of Health and Child Care in the Model Parliament Africa, Shiloh has been instrumental in advocating for the Rural Health Infrastructure Bill, showcasing her unwavering commitment to advancing healthcare accessibility.',
+            'With a strong background in youth engagement and empowerment, Shiloh has proven herself to be a visionary leader, exceeding expectations. As the outgoing Curator of the Global Shapers Chitungwiza Hub, a prestigious initiative of the World Economic Forum, she continues to volunteer her expertise to promote equitable and accessible education and healthcare.',
+            'Shiloh\'s philanthropic endeavors extend to her involvement with the Doctors and Nurses on a Mission Trust, where she collaborates with like-minded individuals to provide essential healthcare services to marginalized communities. Through public platforms and compelling storytelling, she tirelessly raises awareness about critical health issues, including HIV/AIDS, Non-Communicable Diseases, and Antimicrobial Resistance (AMR).',
+            'Shiloh\'s passion, leadership acumen, and selfless dedication to improving community health make her an inspiring role model for her peers and a valuable asset to the healthcare sector.',
+        ]
+    } 
+};
+
+const Old_Members = {
         brandonjaka:{
             id:'brandonjaka',
             name:'Brandon',
@@ -301,3 +329,5 @@ const Members = {
         }
 
 export default Members
+
+

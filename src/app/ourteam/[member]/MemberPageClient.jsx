@@ -298,6 +298,20 @@ export default function MemberPageClient({ member, articles }) {
                 <span className="font-semibold text-gray-700">Instagram</span>
               </Link>
             )}
+            {socials.website && (
+              <Link 
+                href={socials.website}
+                ref={el => socialsRef.current[7] = el}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-3 bg-gradient-to-r from-gray-100 to-gray-200 
+                         hover:from-gray-200 hover:to-gray-300 px-6 py-3 rounded-full transition-all duration-300 
+                         hover:scale-105 hover:shadow-lg"
+              >
+                <i className="bi bi-globe text-xl text-gray-600"></i>
+                <span className="font-semibold text-gray-700">Website</span>
+              </Link>
+            )}
           </div>
         </div>
       </section>
