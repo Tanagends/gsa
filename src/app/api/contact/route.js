@@ -12,7 +12,7 @@ export async function POST(req) {
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: process.env.SMTP_PORT || 465,
-    secure: process.env.SMTP_SECURE === 'true', // true for 465, false for other ports
+    secure: true, // true for 465, false for other ports
     auth: {
       user: process.env.SMTP_USER,
       pass: process.env.SMTP_PASS,
@@ -194,9 +194,26 @@ export async function POST(req) {
     </html>
   `;
 
+  // Validate environment variables
+  const fromEmail = process.env.FROM_EMAIL || process.env.SMTP_USER;
+  const toEmail = process.env.TO_EMAIL || process.env.SMTP_USER || 'secretary@gsa.co.zw';
+  
+  console.log('Email config:', {
+    from: fromEmail,
+    to: toEmail,
+    smtpUser: process.env.SMTP_USER,
+    hasFromEmail: !!process.env.FROM_EMAIL,
+    hasToEmail: !!process.env.TO_EMAIL
+  });
+
+  if (!fromEmail || !toEmail) {
+    console.error('Missing email configuration');
+    return NextResponse.json({ error: 'Email configuration error' }, { status: 500 });
+  }
+
   const mailOptions = {
-    from: process.env.FROM_EMAIL,
-    to: process.env.TO_EMAIL,
+    from: fromEmail,
+    to: toEmail,
     subject: `🔔 New Contact Form Submission from ${name}`,
     html: htmlTemplate,
     text: `New contact form submission:
@@ -209,6 +226,12 @@ Sent on: ${new Date().toLocaleString()}`,
   };
 
   try {
+    console.log('Attempting to send email with options:', {
+      from: mailOptions.from,
+      to: mailOptions.to,
+      subject: mailOptions.subject
+    });
+    
     await transporter.sendMail(mailOptions);
     return NextResponse.json({ message: 'Email sent successfully!' }, { status: 200 });
   } catch (error) {
