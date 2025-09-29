@@ -9,6 +9,7 @@ import {
   HiSparkles, HiGlobeAlt, HiUsers, HiHeart,
   HiClock, HiBell
 } from 'react-icons/hi2'
+import Link from 'next/link'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -157,8 +158,8 @@ export default function ContactPage() {
     {
       icon: HiEnvelope,
       title: "Email Us",
-      details: "gsateamglobal@gmail.com",
-      link: "mailto:gsateamglobal@gmail.com",
+      details: "info@gsa.co.zw",
+      link: "mailto:info@gsa.co.zw",
       color: "from-green-400 to-green-600"
     },
     {
@@ -438,6 +439,19 @@ export default function ContactPage() {
                       </span>
                     </a>
                   ))}
+                </div>
+
+                {/* Other Emails */}
+                <div className="mt-6 pt-6 border-t border-gray-200">
+                  <div className="flex items-center gap-2 text-gray-600 mb-2">
+                    <HiEnvelope className="text-main-500" />
+                    <span className="font-semibold">Other Emails</span>
+                  </div>
+                  <p className="text-sm text-gray-500">
+                    <Link href="mailto:ngonimuzondo@gsa.co.zw">ngonimuzondo@gsa.co.zw</Link>
+                    <br />
+                    <Link href="mailto:munyachisora@gsa.co.zw">munyachisora@gsa.co.zw</Link>
+                  </p>
                 </div>
 
                 {/* Office Hours */}

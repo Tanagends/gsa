@@ -51,9 +51,9 @@ const Members = {
                 'Program and UN Millennium Fellowship.'
             ]
         },
-        marrymwashita:{
-            id:'marrymwashita',
-            name:'Dr Marry',
+        marymwashita:{
+            id:'marymwashita',
+            name:'Dr Mary',
             surname:'Mwashita',
             title:'Research and Data Lead',
             imageExtention:'webp',
@@ -134,7 +134,7 @@ const Members = {
         id:"shilohpaswani",
         name:"Shiloh Vongai",
         surname:"Paswani",
-        title:"Member",
+        title:"Secretary General",
         imageExtention:'webp',
         socials:{
             website:"http://shilohvonpaswani.blogspot.com/"
@@ -211,7 +211,7 @@ const Members = {
             id:'paradzainjazi',
             name:'Paradzai',
             surname:'Njazi',
-            title:'Research Officer',
+            title:'Operation and Internal Affairs Lead',
             imageExtention:'webp',
             socials:{
                 twitter:'https://x.com/innocent_2802?t=emNu7Nnik2OWIZnrcYB9lg&s=09',
